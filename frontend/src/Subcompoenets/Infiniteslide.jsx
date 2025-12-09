@@ -6,8 +6,8 @@ import { InfiniteMovingCards } from "../ui/Infinitemove";
 export function InfiniteMovingCardsDemo() {
   return (
     <div
-      className="h-[20rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05]  relative overflow-hidden">
-      <InfiniteMovingCards items={appPhases} direction="right" speed="slow" />
+      className="h-[25rem] rounded-md flex pb-3 flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05]  relative overflow-hidden">
+      <InfiniteMovingCards items={appPhases} direction="right" speed="medium" />
     </div>
   );
 }

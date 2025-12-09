@@ -86,8 +86,8 @@ olors={[
 <Galaxy 
     mouseRepulsion={true}
     mouseInteraction={true}
-    density={0.4}
-    glowIntensity={0.2}
+    density={0.7}
+    glowIntensity={0.3}
     saturation={0.4}
     hueShift={240}
   />
