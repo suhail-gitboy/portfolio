@@ -61,7 +61,7 @@ const SectionBio = () => {
 
 </div>
 
-<div className=" w-full flex flex-col  items-center text-xl">
+<div className=" w-full mt-20 flex flex-col  items-center text-xl">
 
 <div className='flex items-center justify-center space-x-5'>
   <div>
