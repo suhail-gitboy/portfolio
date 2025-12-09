@@ -21,7 +21,7 @@ const GridDetails=()=>{
     <p className="text-gray-400 text-sm mb-1 font-sans flex items-center"><MdArrowForwardIos className="mr-1"/>ameer.suhail init</p>
     <p className="text-gray-400 text-sm mb-1 font-sans flex items-center"><MdArrowForwardIos className="mr-1"/>role:fullstack web developer</p>
     <p className="text-gray-400 text-sm mb-1 font-sans flex items-center"><MdArrowForwardIos className="mr-1"/>Focus:crafting scalable,modern Web apps</p>
-    <p className="text-gray-400 text-sm mb-1 font-sans flex flex-col md:flex-row md:items-center "><MdArrowForwardIos className="mr-1"/>Status:available <p className="font-sans mx-1 text-blue-600">for</p>freelance & Full time
+    <p className="text-gray-400 text-sm mb-1 font-sans flex flex-row md:flex-col lg:flex-row md:items-center "><MdArrowForwardIos className="mr-1"/>Status:available <p className="font-sans mx-1 text-blue-600">for</p>freelance & Full time
     </p>
 </div>
 <div className="mt-4 w-full flex justify-center items-center h-50 relative overflow-hidden">

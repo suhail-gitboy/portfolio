@@ -101,7 +101,7 @@ const SectionBio = () => {
           "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
         )}
       />
-      <div className=" mt-25 flex flex-col  items-center text-xl z-50">
+      <div className=" mt-25 flex flex-col  items-center text-xl z-40">
 
         <div className='flex  justify-between space-x-5'>
   <div>
