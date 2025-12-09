@@ -49,7 +49,7 @@ olors={[
         
           <h1 className='text-2xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className=' md:text-6xl'>    <FlipWords words={Datas}  /> </i></h1>
 
-          <div className='flex flex-col w-fit space-y-3 p-4rounded-md '>
+          <div className='flex flex-col w-fit mt-20  p-4 rounded-md '>
 {/* <p className="mx-auto max-w-lg py-5 text-left">
       <EncryptedText
         text="Ameer suhail,what i have studied,what text stack i know and for more "
@@ -58,14 +58,14 @@ olors={[
         revealDelayMs={30}
       />
     </p> */}
-<div className='mb-5 mt-4 flex mx-auto items-center space-x-3 text-white/70'>
-<h3 className='text-xl md:text-3xl font-extralight text-center flex items-center space-x-3'><span className='mr-4'> <AnimatedTooltip items={people} className="mr-3" /></span> Ameer suhail</h3>
+<div className='mb-1 mt-4 flex mx-auto items-center space-x-3 text-white/70'>
+<h3 className='text-xl md:text-xl font-extralight text-center flex items-center space-x-3'><span className='mr-4'> <AnimatedTooltip items={people} className="mr-3" /></span> Ameer suhail</h3>
   <div><GradientText
   colors = {["#A9A9A9", "#D1D5DB", "#8B5CF6", "#A9A9A9", "#8B5CF6"]}
 
   animationSpeed={3}
   showBorder={false}
-  className="text-xl md:text-3xl"
+  className="text-xl md:text-xl"
 >
   Fullstack Dev!
 </GradientText></div>

@@ -16,7 +16,39 @@
     background-position: 0% 50%;
   }
 }
+@keyframes floatxy {
+  0%   { transform: rotate(0deg) translate(30px) rotate(0deg); }
+  25%  { transform: rotate(90deg) translate(30px) rotate(-90deg); }
+  50%  { transform: rotate(180deg) translate(30px) rotate(-180deg); }
+  75%  { transform: rotate(270deg) translate(30px) rotate(-270deg); }
+  100% { transform: rotate(360deg) translate(30px) rotate(-360deg); }
+}
+
+/* Utility class */
+@utility float-xy {
+  animation: floatxy 6s linear infinite;
+}
+
+/* delays */
+.float-delay-1 { animation-delay: 0.5s; }
+.float-delay-2 { animation-delay: 1s; }
+.float-delay-3 { animation-delay: 1.5s; }
+.float-delay-4 { animation-delay: 2s; }
+.float-delay-5 { animation-delay: 2.5s; }
+.float-delay-6 { animation-delay: 3s; }
+.float-delay-7 { animation-delay: 3.5s; }
+ 
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
 
 .animate-gradient {
   animation: gradient 2s linear infinite;
 }
+
