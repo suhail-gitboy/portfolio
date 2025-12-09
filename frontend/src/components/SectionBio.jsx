@@ -76,7 +76,7 @@ const SectionBio = () => {
       </div>
     </div>
   </div>
-  <img src="../../public/Ai.webp" className='md:w-70  w-20 h-20 md:h-70 hover:scale-105 transition-all duration-200' alt="" />
+  <img src="/Ai.webp" className='md:w-70  w-20 h-20 md:h-70 hover:scale-105 transition-all duration-200' alt="" />
 </div>
 
     <div

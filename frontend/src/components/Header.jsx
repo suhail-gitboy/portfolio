@@ -51,7 +51,7 @@ olors={[
       />
     </p> */}
 <div className='mb-5 mt-4 flex mx-auto items-center space-x-3 text-white/70'>
-<h3 className='text-xl md:text-3xl font-extralight text-center flex items-center space-x-3'><img src="../../public/IMG_4556.jpg" className='w-20 h-20 rounded-full mr-2' alt="" /> Ameer suhail</h3>
+<h3 className='text-xl md:text-3xl font-extralight text-center flex items-center space-x-3'><img src="/IMG_4556.jpg" className='w-20 h-20 rounded-full mr-2' alt="" /> Ameer suhail</h3>
   <div><GradientText
   colors = {["#A9A9A9", "#D1D5DB", "#8B5CF6", "#A9A9A9", "#8B5CF6"]}
 
