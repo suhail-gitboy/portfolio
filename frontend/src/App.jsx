@@ -5,7 +5,7 @@ import Projects from "./pages/Projects"
 import About from "./pages/About"
 import Experience from "./pages/Experience"
 import Contact from "./pages/Contact"
-import Layout from "./layout"
+import Layout from "./Layout"
 
 
 function App() {
