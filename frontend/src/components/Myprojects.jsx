@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { StickyScroll } from "../ui/Stickyprojects";
- 
- 
+import { FaArrowRight } from 'react-icons/fa';
+import { AnimatePresence, motion } from 'motion/react';
+
 const content = [
   {
     title: "Collaborative Editing",
@@ -165,15 +166,88 @@ const content = [
 
 
 const Myprojects = () => {
+
+    const [open,setOpen]=useState(false)
   return (
     <div className='mt-20 bg-black'>
-        <p className='text-2xl text-neutral-400 text-center py-3'>code meets creativity</p>
-        <p className='text-6xl pb-8 text-center text-white'>Crafted <span className=' bg-linear-to-r from-pink-500 to-violet-600 text-transparent bg-clip-text'>Projects</span></p>
-<div className='px-5 md:px-9 lg:px-16 pt-10'>
+        <p className='text-xl md:text-2xl text-neutral-400 text-center py-3'>code meets creativity</p>
+        <p className='text-5xl md:text-6xl pb-8 text-center text-white'>Crafted <span className=' bg-linear-to-r from-pink-500 to-violet-600 text-transparent bg-clip-text'>Projects</span></p>
+<div className='px-4 md:px-6 lg:px-10 pt-10'>
     <div className="w-full py-4 ">
      <div className='hidden md:flex'>
          <StickyScroll content={content} />
      </div>
+   <AnimatePresence mode='wait'>
+      <div className='flex flex-col gap-4 md:hidden'>
+        {
+            content.map((data,key)=>(
+                <motion.div   key={key}
+    initial={{ opacity: 0, y: 20, scale: 0.98 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    exit={{ opacity: 0, y: -20, scale: 0.98 }}
+    transition={{ duration: 0.4, ease: "easeOut" }} className='text-white rounded-b-2xl '>
+            <img src={data.image} alt=""  className='w-full h-75 rounded-t-2xl object-cover' />
+            <div className='py-6 px-4 bg-blue-900/60 rounded-b-2xl '>
+         <h1 className='text-2xl py-2'>{data.title}</h1>
+         <p className='text-gray-400 text-sm font-sans mb-2'>details</p>
+         {/* icons */}
+                            <div
+              className="text-sm py-2 font-sans flex flex-row flex-wrap gap-1 space-x-1 p-2 w-full text-slate-300">{
+                    data.library.map((data,key)=>(
+                        <div key={key} className=" border border-white/40 py-2 rounded-full px-4 bg-black flex items-center text-sm pb-2 font-sans ">
+<img src={data.icon} className="w-5 h-5 mr-1" alt="" />
+<p className="text-sm">{data.name}</p>
+                        </div>
+                    ))
+
+                }
+                
+              </div>
+    <div className='py-3'>
+     
+    </div>
+<div className="w-full p-4  text-white rounded-xl">
+      <button
+        onClick={() => setOpen(!open)}
+        className="text-sm px-4 py-2 bg-white/10 font-sans rounded-md hover:bg-white/20 transition"
+      >
+        {open ? "View Less" : "View More"}
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.45, ease: "easeInOut" }}
+            className="overflow-hidden mt-4"
+          >
+            <p className="text-gray-300 text-xl mb-2 font-sans leading-6">
+            keyFeatures:
+            {
+                    data.features.map((datasec,key)=>(
+                        <li key={key} className="list-none text-xs pb-3 font-sans "><span className={` mr-1 text-xl`}>+</span> {datasec}</li>
+                    ))
+
+                }
+                
+
+            </p>
+
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+          
+          {/* for acodian */}
+          <a href={data.url} className='w-full font-sans rounded-xl py-2 bg-white/30 flex items-center justify-center hover:bg-white/40'>View project <FaArrowRight className=' ml-2'/></a>
+            </div>
+        </motion.div>
+            ))
+        }
+     </div>
+   </AnimatePresence>
     </div>
 </div>
       

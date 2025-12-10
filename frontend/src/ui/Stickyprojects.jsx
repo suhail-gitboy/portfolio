@@ -50,13 +50,13 @@ export const StickyScroll = ({
   return (
     <motion.div
      
-      className="relative  h-[40vw] grid grid-cols-2 justify-center gap-9 space-x-10 overflow-y-auto rounded-md p-5"
+      className="relative  h-[40vw] grid grid-cols-2 justify-start gap-5 space-x-10 overflow-y-auto rounded-md p-3"
       ref={ref}>
      
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "sticky top-10 hidden h-110 w-full  overflow-hidden rounded-xl bg-white lg:block",
+          "sticky top-10 hidden  h-110 w-full  overflow-hidden rounded-xl bg-white md:block",
           contentClassName
         )}>
       <div className="h-full w-full  flex justify-center items-center">

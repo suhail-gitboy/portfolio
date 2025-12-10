@@ -20,8 +20,10 @@ function App() {
     {path:"/contact",element:<Contact/>},
     ]}
   ])
+
   return (
     <>
+    
     <RouterProvider router={router}/>
     </>
   )
