@@ -8,7 +8,7 @@ const content = [
   {
     title: "Collaborative Editing",
     url:"https://shopping-cart-pi-ruby.vercel.app/",
-    image:"../../public/Screenshot 2025-12-10 at 7.43.40 PM.png",
+    image:"/Screenshot 2025-12-10 at 7.43.40 PM.png",
     description:
       "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
     content: (
@@ -25,18 +25,18 @@ const content = [
 ], library:[
     {
         name:"React",
-        icon:"../../public/reactjs-svgrepo-com.svg"
+        icon:"/reactjs-svgrepo-com.svg"
     },
     {
         name:"Node.js",
-        icon:"../../public/node-js-svgrepo-com.svg"
+        icon:"/node-js-svgrepo-com.svg"
     },{
         name:"Tailwind.js",
-        icon:"../../public/tailwind-svgrepo-com.svg"
+        icon:"/tailwind-svgrepo-com.svg"
     },
     {
         name:"vite",
-        icon:"../../public/vite.svg"
+        icon:"/vite.svg"
     },
     
  ]
@@ -45,7 +45,7 @@ const content = [
   {
     title: "Real time changes",
     url:"https://portfolio-jf7f.vercel.app/",
-      image:"../../public/Screenshot 2025-12-10 at 7.44.27 PM.png",
+      image:"/Screenshot 2025-12-10 at 7.44.27 PM.png",
     description:
       "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
     content: (
@@ -69,18 +69,18 @@ const content = [
  library:[
     {
         name:"React",
-        icon:"../../public/reactjs-svgrepo-com.svg"
+        icon:"/reactjs-svgrepo-com.svg"
     },
     {
         name:"Node.js",
-        icon:"../../public/node-js-svgrepo-com.svg"
+        icon:"/node-js-svgrepo-com.svg"
     },{
         name:"Tailwind.js",
-        icon:"../../public/tailwind-svgrepo-com.svg"
+        icon:"/tailwind-svgrepo-com.svg"
     },
     {
         name:"vite",
-        icon:"../../public/vite.svg"
+        icon:"/vite.svg"
     },
     
  ]
@@ -89,7 +89,7 @@ const content = [
   {
     title: "Version control",
     url:"https://al-resumebuilder.vercel.app/",
-      image:"../../public/Screenshot 2025-12-10 at 7.44.57 PM.png",
+      image:"/Screenshot 2025-12-10 at 7.44.57 PM.png",
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
@@ -106,18 +106,18 @@ const content = [
 ], library:[
     {
         name:"React",
-        icon:"../../public/reactjs-svgrepo-com.svg"
+        icon:"/reactjs-svgrepo-com.svg"
     },
     {
         name:"Node.js",
-        icon:"../../public/node-js-svgrepo-com.svg"
+        icon:"/node-js-svgrepo-com.svg"
     },{
         name:"Tailwind.js",
-        icon:"../../public/tailwind-svgrepo-com.svg"
+        icon:"/tailwind-svgrepo-com.svg"
     },
     {
         name:"vite",
-        icon:"../../public/vite.svg"
+        icon:"/vite.svg"
     },
     
  ]
@@ -126,7 +126,7 @@ const content = [
   {
     title: "Running out of content",
     url:"https://lum-task-5.netlify.app/",
-      image:"../../public/Screenshot 2025-12-10 at 7.45.57 PM.png",
+      image:"/Screenshot 2025-12-10 at 7.45.57 PM.png",
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
@@ -144,18 +144,18 @@ const content = [
  library:[
     {
         name:"React",
-        icon:"../../public/reactjs-svgrepo-com.svg"
+        icon:"/reactjs-svgrepo-com.svg"
     },
     {
         name:"Node.js",
-        icon:"../../public/node-js-svgrepo-com.svg"
+        icon:"/node-js-svgrepo-com.svg"
     },{
         name:"Tailwind.js",
-        icon:"../../public/tailwind-svgrepo-com.svg"
+        icon:"/tailwind-svgrepo-com.svg"
     },
     {
         name:"vite",
-        icon:"../../public/vite.svg"
+        icon:"/vite.svg"
     },
     
  ]
@@ -167,7 +167,7 @@ const content = [
 
 const Myprojects = () => {
 
-    const [open,setOpen]=useState(false)
+    const [open,setOpen]=useState(null)
   return (
     <div className='mt-20 bg-black'>
         <p className='text-xl md:text-2xl text-neutral-400 text-center py-3'>code meets creativity</p>
@@ -208,14 +208,14 @@ const Myprojects = () => {
     </div>
 <div className="w-full p-4  text-white rounded-xl">
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() =>key!==open? setOpen(key):setOpen(null)}
         className="text-sm px-4 py-2 bg-white/10 font-sans rounded-md hover:bg-white/20 transition"
       >
         {open ? "View Less" : "View More"}
       </button>
 
       <AnimatePresence>
-        {open && (
+        {open==key && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
