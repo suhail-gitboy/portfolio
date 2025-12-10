@@ -26,9 +26,9 @@ const Datas=["UI experience.","Innovations.","Automations.","Productivity."]
 const Header = () => {
   const Navigate=useNavigate()
   return (
-    <div className='h-screen relative bg-black '>
+    <div className='h-screen relative '>
       <Nav/>
-      <div className=' flex justify-center items-center h-full  z-30 pt-40'>
+      <div className=' flex justify-center items-center h-full bg-black z-30 pt-40'>
         <div className=" z-30 p-5 md:p-10 flex flex-col items-center">
          <div className="md:px-3 px-1 py-1 flex items-center  rounded-lg  border border-white/10  bg-neutral-800 mb-9" >
           <p className='px-1 rounded-md bg-violet-950 text-white  w-fit mr-2 text-xs '>new</p><p className='font-extralight text-md md:text-lg border-none '><GradientText
@@ -82,12 +82,12 @@ olors={[
       </div>
     
 
-<div style={{ position: 'absolute' }} className=" h-full bg-black top-0 left-0 right-0">
+<div style={{ position: 'absolute' }} className=" h-full bg-linear-to-b border border-b rounded rounded-b-4xl from-neutral-800 via-black to-gray-900  top-0 left-0 right-0">
 <Galaxy 
     mouseRepulsion={true}
     mouseInteraction={true}
-    density={0.7}
-    glowIntensity={0.3}
+    density={0.5}
+    glowIntensity={0.2}
     saturation={0.4}
     hueShift={240}
   />

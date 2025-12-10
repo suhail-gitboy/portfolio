@@ -13,7 +13,7 @@ const GridDetails=()=>{
 <div className="md:grid md:grid-cols-6 gap-2 text-white h-auto p-3 px-5 md:px-16 lg:px-20">
     {/* left */}
     <div className="col-span-2 bg-neutral-900 h-auto overflow-hidden  p-3 border mb-2 md:mb-0 border-white/10 rounded-md ">
-<div className="h-auto w-full p-2">
+<div className="h-fit md:h-auto w-full p-2">
 <h1 className="text-xl mb-1 text-neutral-600">Ai Assistand Developer</h1>
 <h1 className="text-md text-gray-200 font-sans">the enthusiastic mindset to build unique projects. </h1>
 
@@ -35,9 +35,7 @@ const GridDetails=()=>{
 
 </div>
 
-<div className="w-full h-70">
 
-</div>
 </div>
     </div>
 
@@ -45,18 +43,18 @@ const GridDetails=()=>{
          <div className="  md:grid grid-cols-2 space-y-2 md:space-y-0 gap-2 ">
 
             {/* first */}
-                    <div className=" bg-neutral-900 w-full overflow-hidden   p-3 border border-white/10 rounded-md  gap-2">
+                    <div className=" bg-neutral-900 w-full overflow-hidden  h-auto  p-3 py-3 border border-white/10 rounded-md  gap-2">
  <CardSpotlight className="h-96 w-full flex flex-col  ">
-     <h1 className="text-md text-blue-500 mb-2 z-40">Connect instantly i respond Faster</h1>
+     <h1 className="text-md text-blue-500 mb-2 z-40">Connect instantly for respond Faster</h1>
       <img src="../../public/IMG_3595.jpg
-       " alt="" className="w-2/3  h-40 rounded-md z-40" />
-      <div className="text-neutral-200 mt-4 relative z-20">
+       " alt="" className="w-2/3 h-40 md:h-45 rounded-md z-40" />
+      <div className="text-neutral-200 mt-1 relative z-20">
        
         <p className=" text-sm mt-1 text-gray-500">
          Dm for more:
         </p>
       </div>
-      <div className=" mt-7  z-20 font-sans text-gray-300">
+      <div className=" mt-2  z-20 font-sans text-gray-300">
       <p className="text-md">91+ 7736777917</p>
       <a href="mailto:yourname@gmail.com" className="flex items-center p-2 px-3 rounded-md mt-2 bg-neutral-800 w-fit"><IconMessage className="mr-1 text-md"/> suhailgti12@gmail.com</a>
     
