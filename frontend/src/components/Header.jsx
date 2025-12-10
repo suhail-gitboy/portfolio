@@ -82,7 +82,7 @@ olors={[
       </div>
     
 
-<div style={{ position: 'absolute' }} className=" h-full bg-linear-to-b border border-b rounded rounded-b-4xl from-neutral-800 via-black to-gray-900  top-0 left-0 right-0">
+<div style={{ position: 'absolute' }} className=" h-full bg-linear-to-b border border-b rounded rounded-b-4xl from-black to-gray-900  top-0 left-0 right-0">
 <Galaxy 
     mouseRepulsion={true}
     mouseInteraction={true}
