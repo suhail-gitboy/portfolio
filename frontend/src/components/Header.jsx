@@ -12,6 +12,7 @@ import { FaMailchimp } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
 import TextType from  "../ui/Texttype";
 import { AnimatedTooltip } from '../ui/Tooltiptwo';
+import { motion } from 'motion/react';
 
 const people = [
   {
@@ -47,7 +48,7 @@ olors={[
 </GradientText></p> <MdArrowForwardIos className='text-white/50 ml-2 text-md'/> 
          </div>
         
-          <h1 className='text-2xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className=' md:text-6xl'>    <FlipWords words={Datas}  /> </i></h1>
+          <motion.h1 initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration:0.6}} className='text-2xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className=' md:text-6xl'>    <FlipWords words={Datas}  /> </i></motion.h1>
 
           <div className='flex flex-col w-fit mt-20  p-4 rounded-md '>
 {/* <p className="mx-auto max-w-lg py-5 text-left">
@@ -59,8 +60,8 @@ olors={[
       />
     </p> */}
 <div className='mb-1 mt-4 flex mx-auto items-center space-x-3 text-white/70'>
-<h3 className='text-xl md:text-xl font-extralight text-center flex items-center space-x-3'><span className='mr-4'> <AnimatedTooltip items={people} className="mr-3" /></span> Ameer suhail</h3>
-  <div><GradientText
+<motion.h3 initial={{opacity:0,x:-20}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}} className='text-xl md:text-xl font-extralight text-center flex items-center space-x-3'><span className='mr-4'> <AnimatedTooltip items={people} className="mr-3" /></span> Ameer suhail</motion.h3>
+  <motion.div initial={{opacity:0,x:20}} whileInView={{opacity:1,x:0}} transition={{duration:0.8}}><GradientText
   colors = {["#A9A9A9", "#D1D5DB", "#8B5CF6", "#A9A9A9", "#8B5CF6"]}
 
   animationSpeed={3}
@@ -68,14 +69,14 @@ olors={[
   className="text-xl md:text-xl"
 >
   Fullstack Dev!
-</GradientText></div>
+</GradientText></motion.div>
 
 </div>
 
-    <div className=' flex mx-auto space-x-3'>
+    <motion.div initial={{opacity:0,y:10}} whileInView={{opacity:1,y:0}} transition={{duration:0.5,delay:0.6}} className=' flex mx-auto space-x-3'>
       <button className='flex items-center text-md md:text-xl text-gray-300  border rounded-full px-4 py-2 border-gray-700'>Lets Connect <MdArrowForwardIos className='ml-1'/></button>
       <button onClick={()=>Navigate("/contact")} className='text-gray-400 text-md md:text-lg hover:text-white group transition-colors duration-300 flex items-center'><MdAlternateEmail className='mr-2 text-white group-hover:rotate-180 transition-transform text-lg md:text-3xl duration-300 group-hover:text-violet-600 '/>suhailgti12@gmail.com</button>
-    </div>
+    </motion.div>
     
           </div>
         </div>

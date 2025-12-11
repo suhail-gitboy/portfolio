@@ -169,23 +169,23 @@ const Myprojects = () => {
 
     const [open,setOpen]=useState(null)
   return (
-    <div className='mt-20 bg-black'>
-        <p className='text-xl md:text-2xl text-neutral-400 text-center py-3'>code meets creativity</p>
-        <p className='text-5xl md:text-6xl pb-8 text-center text-white'>Crafted <span className=' bg-linear-to-r from-pink-500 to-violet-600 text-transparent bg-clip-text'>Projects</span></p>
+    <div className='pt-20 bg-black'>
+        <motion.p initial={{opacity:1 ,y:13 }} whileInView={{opacity:1,y:0}} transition={{duration:0.4}}  className='text-2xl md:text-4xl text-neutral-400 text-center py-3'>code meets creativity</motion.p>
+        <motion.p initial={{opacity:0 ,y:18 }} whileInView={{opacity:1,y:0}}  transition={{duration:0.8, delay:0.4}} className='text-5xl md:text-8xl pb-8 text-center text-white'>Crafted <span className=' bg-linear-to-r from-pink-500 to-violet-600 text-transparent bg-clip-text'>Projects</span></motion.p>
 <div className='px-4 md:px-6 lg:px-10 pt-10'>
     <div className="w-full py-4 ">
      <div className='hidden md:flex'>
          <StickyScroll content={content} />
      </div>
    <AnimatePresence mode='wait'>
-      <div className='flex flex-col gap-4 md:hidden'>
+      <div className='flex flex-col gap-10 md:hidden'>
         {
             content.map((data,key)=>(
                 <motion.div   key={key}
-    initial={{ opacity: 0, y: 20, scale: 0.98 }}
-    animate={{ opacity: 1, y: 0, scale: 1 }}
-    exit={{ opacity: 0, y: -20, scale: 0.98 }}
-    transition={{ duration: 0.4, ease: "easeOut" }} className='text-white rounded-b-2xl '>
+    initial={{ opacity: 0, y: 60, scale: 0.98 }}
+   whileInView={{ opacity: 1, y: 0 ,scale:1}}
+viewport={{ once: false, amount: 0.2 }}
+    transition={{ duration: 0.7, ease: "easeOut" }} className='text-white rounded-b-2xl '>
             <img src={data.image} alt=""  className='w-full h-75 rounded-t-2xl object-cover' />
             <div className='py-6 px-4 bg-blue-900/60 rounded-b-2xl '>
          <h1 className='text-2xl py-2'>{data.title}</h1>
@@ -223,7 +223,8 @@ const Myprojects = () => {
             transition={{ duration: 0.45, ease: "easeInOut" }}
             className="overflow-hidden mt-4"
           >
-            <p className="text-gray-300 text-xl mb-2 font-sans leading-6">
+            <p className="py-2 text-sm text-gray-300 font-sans">{data.description}</p>
+            <p className="text-white text-xl mb-2 font-sans leading-6">
             keyFeatures:
             {
                     data.features.map((datasec,key)=>(

@@ -45,9 +45,17 @@ const GridDetails=()=>{
             {/* first */}
                     <div className=" bg-neutral-900 w-full overflow-hidden  h-auto  p-3 py-3 border border-white/10 rounded-md  gap-2">
  <CardSpotlight className="h-96 w-full flex flex-col  ">
-     <h1 className="text-md text-gray-500 mb-2 z-40">Connect instantly for respond Faster</h1>
-      <img src="/IMG_3595.jpg
-       " alt="" className="w-2/3 h-40 md:h-45 rounded-md z-40" />
+     <h1 className="text-md text-gray-500 mb-2 z-40 text-white w-fit border-b border-purple-500">Let's Connect - <span className="text-gray-500">Quick Response</span> </h1>
+     <div className="flex gap-2">
+         <img src="/IMG_3595.jpg
+       " alt="" className="w-2/4 h-40 md:h-45 rounded-md z-40" />
+       <div className="flex flex-col justify-start">
+        <p className="font-sans text-2xl mb-1">Ameer suhail</p>
+        <p className="font-sans text-sm text-gray-400 mb-2">Full-stack Developer (MERN + Devops)</p>
+        <p className="font-sans text-xs text-gray-400">India-(Flexible to gulf time Zone)</p>
+       
+       </div>
+     </div>
       <div className="text-neutral-200 mt-1 relative z-20">
        
         <p className=" text-sm mt-1 text-gray-500">

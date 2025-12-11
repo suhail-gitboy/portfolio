@@ -44,7 +44,7 @@ const [isNavopen,Setisnavopen]=useState(false)
   </div>
 );
   return (
-    <div className={`pt-4 pb-1 px-5 md:px-20 lg:px-30 ${scrolled?"bg-white/5 backdrop-blur-sm":"bg-transparent"} fixed  text-white top-0 w-full  z-50`}>
+    <div className={`pt-3  px-5 md:px-20 lg:px-30 ${scrolled?"bg-white/5 backdrop-blur-sm":"bg-transparent"} fixed  text-white top-0 w-full  z-50`}>
 
       <div className={`${isNavopen?"translate-x-0 absolute":"translate-x-full"} z-50 bg-neutral-900 top-0 right-0 md:hidden bottom-0 fixed inset-y-0 h-screen  transition-transform duration-300 w-3/4`}>
         <Menubar/>
@@ -52,7 +52,7 @@ const [isNavopen,Setisnavopen]=useState(false)
       </div>
       <div className='flex justify-between items-center'>
         <h1 className='text-3xl text-gray-300'>AM.</h1>
-        <div className='w-fit h-fit hidden md:flex'>
+        <div className='w-fit  hidden md:flex'>
             <FloatingDockDemo/>
         </div>
        <div className='flex justify-between  items-center space-x-6'>

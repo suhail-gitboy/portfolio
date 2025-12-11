@@ -4,11 +4,11 @@ import Footer from './common/Footer'
 import Nav from './common/Nav'
 const Layout = () => {
   return (
-  <>
+  <div className='bg-black'>
 
   <Outlet/>
   <Footer/>
-  </>
+  </div>
   )
 }
 
