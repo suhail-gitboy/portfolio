@@ -5,26 +5,26 @@ import Projects from "./pages/Projects"
 import About from "./pages/About"
 import Experience from "./pages/Experience"
 import Contact from "./pages/Contact"
-import Layout from "./Layout"
+
 
 
 function App() {
 
 
-  const router=createBrowserRouter([
-    {path:"/",element:<Layout/>,children:[
-      {path:"/",element:<Home/>},
-    {path:"/projects",element:<Projects/>},
-    {path:"/about",element:<About/>},
-    {path:"/experience",element:<Experience/>},
-    {path:"/contact",element:<Contact/>},
-    ]}
+  const router = createBrowserRouter([
+
+    { path: "/", element: <Home /> },
+    { path: "/projects", element: <Projects /> },
+    { path: "/about", element: <About /> },
+    { path: "/experience", element: <Experience /> },
+    { path: "/community", element: <Contact /> },
+
   ])
 
   return (
     <>
-    
-    <RouterProvider router={router}/>
+
+      <RouterProvider router={router} />
     </>
   )
 }

@@ -13,7 +13,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 export function FloatingDockDemo() {
-  const Navigate=useNavigate()
+  const Navigate = useNavigate()
 
   const links = [
     {
@@ -24,7 +24,7 @@ export function FloatingDockDemo() {
     {
       title: "Projects",
       icon: <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-     onClick: () => Navigate("/projects"),
+      onClick: () => Navigate("/projects"),
     },
     {
       title: "About Me",
@@ -37,15 +37,15 @@ export function FloatingDockDemo() {
       onClick: () => Navigate("/experience"),
     },
     {
-      title: "Reach Me",
+      title: "Community",
       icon: <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      onClick: () => Navigate("/contact"),
+      onClick: () => Navigate("/community"),
     },
   ];
   return (
     <div className="flex items-center justify-center h-40 w-full">
       <FloatingDock
-        
+
         mobileClassName="translate-y-20"
         items={links} />
     </div>
