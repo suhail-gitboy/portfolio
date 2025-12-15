@@ -36,12 +36,12 @@ const AImodal = ({ Setaimodal, aimodal }) => {
 
     return (
         <motion.div initial={{ opacity: 0, scale: 0.6 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.2 }} className='fixed top-30 right-10 z-50 '>
-            <div className='w-149  h-120 rounded-xl bg-neutral-800 text-white'>
+            <div className='w-4/6 md:w-149  h-120 rounded-xl bg-neutral-800 text-white'>
                 <div className='flex rounded-t-md items-center justify-between bg-black p-3'>
                     <div>
                         <img src="../../public/Ai.webp" className='w-8 h-8' alt="" />
                     </div>
-                    <p onClick={() => Setaimodal(false)} className='font-sans text-xs text-gray-300 hover:text-white'>close</p>
+                    <p onClick={() => Setaimodal(false)} className='font-sans px-4 py-2 text-xs text-gray-300 hover:text-white'>close</p>
                 </div>
 
                 <div className="h-92 p-4  scroll-auto  overflow-auto">

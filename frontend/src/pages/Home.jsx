@@ -20,14 +20,14 @@ const Home = () => {
   return (
     <div className='bg-black'>
       <Header />
-      <SectionBio />
+      <SectionBio Setaimodal={Setaimodal} />
       <GridDetails />
       <Myprojects />
       <Mystack />
       <WorkExperience />
       <Watiprovide />
 
-      <div className="fixed right-4 bottom-6 ">
+      <div className="fixed z-50 right-4 bottom-6 ">
         <div onClick={() => Setaimodal(!Almodal)} className="flex items-center  rounded-full py-2 px-2 bg-white text-black font-sans  shadow-3xl shadow-violet-600">
 
           <p
