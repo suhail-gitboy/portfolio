@@ -28,7 +28,7 @@ export default function AboutSection() {
             <p className="text-sm uppercase tracking-widest text-gray-400 font-sans">More about me</p>
 
             <h1 className="text-4xl md:text-5xl font-bold">
-              Hi there! I'm <span className="bg-linear-to-r from-rose-500 to-violet-600 bg-clip-text text-transparent">Ameer Suhail</span>
+              Hi there! I'm <span className="bg-linear-to-r from-rose-400 via-rose-400 to-purple-600 bg-clip-text text-transparent">Ameer Suhail</span>
             </h1>
 
             <p className="text-gray-300 font-sans leading-relaxed">
