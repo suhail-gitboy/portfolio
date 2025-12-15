@@ -169,7 +169,7 @@ const Myprojects = () => {
 
   const [open, setOpen] = useState(null)
   return (
-    <div id='project' className='pt-20 bg-black'>
+    <div id='project' className='pt-5 bg-black'>
       <motion.p initial={{ opacity: 1, y: 13 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className='text-2xl md:text-4xl text-neutral-400 text-center py-3'>code meets creativity</motion.p>
       <motion.p initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className='text-5xl md:text-8xl pb-8 text-center text-white'>Crafted <span className=' bg-linear-to-r from-pink-500 to-violet-600 text-transparent bg-clip-text'>Projects</span></motion.p>
       <div className='px-4 md:px-6 lg:px-10 pt-10'>

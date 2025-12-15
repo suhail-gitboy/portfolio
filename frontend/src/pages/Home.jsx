@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import SectionBio from '../components/SectionBio'
 import GridDetails from '../components/GridDetails'
@@ -8,9 +8,12 @@ import Mystack from '../components/Mystack'
 import WorkExperience from '../components/Work'
 import { SiMinutemailer } from "react-icons/si";
 import Watiprovide from '../components/Watiprovide'
+import AImodal from '../components/AImodal'
+import { AnimatePresence } from 'motion/react'
 const Home = () => {
 
-
+  const [Almodal, Setaimodal] = useState(false
+  )
   const { pathname } = useLocation()
 
   useEffect(() => { window.scrollTo(0, 0) }, [pathname])
@@ -25,7 +28,7 @@ const Home = () => {
       <Watiprovide />
 
       <div className="fixed right-4 bottom-6 group">
-        <div className="flex items-center  rounded-full py-2 px-2 bg-white text-black font-sans  shadow-3xl shadow-violet-600">
+        <div onClick={() => Setaimodal(true)} className="flex items-center  rounded-full py-2 px-2 bg-white text-black font-sans  shadow-3xl shadow-violet-600">
 
           <p
             className="
@@ -41,7 +44,13 @@ const Home = () => {
           <SiMinutemailer className="text-3xl group-hover:rotate-360 duration-700 transition-all " />
         </div>
       </div>
+      <AnimatePresence>
 
+
+        {
+          Almodal && <AImodal Setaimodal={Setaimodal} />
+        }
+      </AnimatePresence>
     </div>
   )
 }

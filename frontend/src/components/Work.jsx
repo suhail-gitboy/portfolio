@@ -46,7 +46,7 @@ const experiences = [
 
 const WorkExperience = () => {
   return (
-    <div className='pt-50 flex flex-col items-center'>
+    <div className='pt-30 md:pt-50 flex flex-col items-center'>
 
       <motion.p initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: easeIn }} className='flex px-4 py-2 rounded-full border border-white/20 items-center font-sans text-white md:text-md text-md w-fit bg-white/10'><LuBuilding2 className='mr-2 text-violet-800' /> Professional Experience</motion.p>
       <motion.h1 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: easeIn }} className='py-8  text-5xl md:text-8xl  text-transparent bg-linear-to-l from-white to-neutral-500 bg-clip-text'>Work Experience</motion.h1>

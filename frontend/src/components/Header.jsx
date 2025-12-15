@@ -31,7 +31,7 @@ const Header = () => {
       <Nav />
       <div className=' flex justify-center items-center  md:h-full bg-black z-30 pt-40'>
         <div className=" z-30 p-5 md:p-10 flex flex-col items-center">
-          <a href='#project' className="md:px-3 px-1 py-1 flex items-center  rounded-lg  border border-white/10  bg-neutral-800 mb-9" >
+          <motion.a initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} href='#project' className="md:px-3 px-1 py-1 flex items-center  rounded-lg  border border-white/10  bg-neutral-800 mb-9" >
             <p className='px-1 rounded-md bg-violet-950 text-white  w-fit mr-2 text-xs '>new</p><p className='font-extralight text-md md:text-lg border-none '><GradientText
               olors={[
                 "#8B5CF6", // violet (first)
@@ -46,7 +46,7 @@ const Header = () => {
             >
               projects launched!
             </GradientText></p> <MdArrowForwardIos className='text-white/50 ml-2 text-md' />
-          </a>
+          </motion.a>
 
           <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className='text-3xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className=' md:text-6xl'>    <FlipWords words={Datas} /> </i></motion.h1>
 

@@ -5,6 +5,7 @@ import Projects from "./pages/Projects"
 import About from "./pages/About"
 import Experience from "./pages/Experience"
 import Contact from "./pages/Contact"
+import AboutSection from "./pages/About"
 
 
 
@@ -15,7 +16,7 @@ function App() {
 
     { path: "/", element: <Home /> },
     { path: "/projects", element: <Projects /> },
-    { path: "/about", element: <About /> },
+    { path: "/about", element: <AboutSection /> },
     { path: "/experience", element: <Experience /> },
     { path: "/community", element: <Contact /> },
 
