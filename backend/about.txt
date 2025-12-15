@@ -1,0 +1,6 @@
+My name is Suhail Ameer.
+I am a MERN stack developer.
+I am a BCA graduate (Bachelor of Computer Applications / Computer Science) from Bangalore North University. I completed my elementary and school education at Hira English School, where I studied Computer Science and built a strong foundation in programming and problem-solving.
+I am currently an aspiring full-stack web developer, learning and building projects using modern web technologies. My primary focus is on MERN stack development, including React, Node.js, Express, and MongoDB, along with Tailwind CSS for UI development.
+In addition to web development, I am actively learning AI integration in web applications, especially Gemini AI, Retrieval-Augmented Generation (RAG) systems, and building AI-powered portfolio assistants. I also have beginner-to-intermediate knowledge of Docker, basic Kubernetes, and cloud concepts, and I am continuously improving my skills.
+I am passionate about building scalable, real-world applications, learning new technologies, and growing as a software developer.
