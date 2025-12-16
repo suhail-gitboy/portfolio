@@ -14,8 +14,17 @@ const Home = () => {
 
   const [Almodal, Setaimodal] = useState(false
   )
+  const [timer, Settime] = useState(true)
   const { pathname } = useLocation()
 
+
+  useEffect(() => {
+    setTimeout(() => {
+      Settime(false)
+
+    }, 1000);
+
+  }, [])
   useEffect(() => { window.scrollTo(0, 0) }, [pathname])
   return (
     <div className='bg-black'>
@@ -33,8 +42,8 @@ const Home = () => {
           <p
             className={`
         overflow-hidden whitespace-nowrap
-        transition-all duration-600 ease-in-out
-        ${Almodal == false ? "max-w-sm opacity-100" : "max-w-0 opacity-0"}
+        transition-all duration-900 ease-in-out
+        ${timer == true ? "max-w-sm opacity-100" : "max-w-0 opacity-0"}
         
          font-sans
       `}

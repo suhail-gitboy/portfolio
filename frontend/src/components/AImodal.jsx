@@ -36,7 +36,7 @@ const AImodal = ({ Setaimodal, aimodal }) => {
 
     return (
         <motion.div initial={{ opacity: 0, scale: 0.6 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.2 }} className='fixed top-30 right-10 z-50 '>
-            <div className='w-4/6 md:w-149  h-120 rounded-xl bg-neutral-800 text-white'>
+            <div className='w-90 md:w-149  h-120 rounded-xl bg-neutral-800 text-white'>
                 <div className='flex rounded-t-md items-center justify-between bg-black p-3'>
                     <div>
                         <img src="../../public/Ai.webp" className='w-8 h-8' alt="" />

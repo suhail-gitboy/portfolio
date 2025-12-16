@@ -1,10 +1,16 @@
 import { Github, Linkedin, Mail, Instagram, InstagramIcon } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import Nav from "../common/Nav";
 import { motion } from "motion/react";
 import { TimelineDemo } from "../common/Timeline";
+import { useEffect, useState } from "react";
 
 export default function AboutSection() {
+
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
   return (
     <div className="bg-black">
       <Nav />
@@ -28,11 +34,11 @@ export default function AboutSection() {
             <p className="text-sm uppercase tracking-widest text-gray-400 font-sans">More about me</p>
 
             <h1 className="text-4xl md:text-5xl font-bold">
-              Hi there! I'm <span className="bg-linear-to-r from-rose-400 via-rose-400 to-purple-600 bg-clip-text text-transparent">Ameer Suhail</span>
+              Hi there! I'm <span className="bg-linear-to-r from-blue-500 via-blue-600 to-purple-700 bg-clip-text text-transparent">Ameer Suhail</span>
             </h1>
 
             <p className="text-gray-300 font-sans leading-relaxed">
-              I’m a MERN stack developer who enjoys building modern, scalable web applications
+              I’m a MERN stack developer who  building modern, scalable web applications
               and experimenting with new technologies. I focus on writing clean code and
               creating user-friendly experiences that actually solve problems.
             </p>

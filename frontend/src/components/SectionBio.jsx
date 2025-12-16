@@ -32,7 +32,7 @@ const words = [
 const SectionBio = ({ Setaimodal }) => {
   return (
     <div className='bg-black h-fit pb-20 text-white relative'>
-      <div className='absolute top-0 bottom-0 left-0 h-full w-full overflow-hidden z-50'>
+      <div className='absolute top-0 bottom-0 left-0 h-full w-full overflow-hidden z-40'>
         <Ribbons
           baseThickness={20}
           colors={['#7F00FF']}
@@ -110,8 +110,8 @@ const SectionBio = ({ Setaimodal }) => {
 
                 <TypewriterEffectSmooth words={words} />
                 <div
-                  onClick={() => Setaimodal(true)} className="flex flex-col items-center justify-center md:flex-row space-y-1 md:space-y-0 space-x-0 md:space-x-4">
-                  <BorderMagicButton />
+                  className="flex z-50 flex-col items-center justify-center md:flex-row space-y-1 md:space-y-0 space-x-0 md:space-x-4">
+                  <BorderMagicButton onClick={() => Setaimodal(true)} />
 
                 </div>
               </div>
