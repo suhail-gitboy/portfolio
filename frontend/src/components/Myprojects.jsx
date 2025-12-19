@@ -196,7 +196,7 @@ const content = [
   {
     title: "AI-Powered Portfolio Website",
     url: "https://portfolio-jf7f.vercel.app/",
-    image: "../../public/Screenshot 2025-12-10 at 7.44.27 PM.png",
+    image: "/Screenshot 2025-12-10 at 7.44.27 PM.png",
     description:
       "A personal portfolio showcasing projects and skills, enhanced with a lightweight AI-powered RAG system to deliver intelligent content responses and improved user interaction.",
     content: (

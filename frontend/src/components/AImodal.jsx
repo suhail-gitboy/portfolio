@@ -41,7 +41,7 @@ const AImodal = ({ Setaimodal, aimodal }) => {
             <div className='w-full mx-5 md:w-149  h-120 rounded-xl bg-neutral-800 text-white'>
                 <div className='flex rounded-t-md items-center justify-between bg-black p-3'>
                     <div>
-                        <img src="../../public/Ai.webp" className='w-8 h-8' alt="" />
+                        <img src="/Ai.webp" className='w-8 h-8' alt="" />
                     </div>
                     <p onClick={() => Setaimodal(false)} className='font-sans px-4 py-2 text-xs text-gray-300 hover:text-white'>close</p>
                 </div>
@@ -67,7 +67,7 @@ const AImodal = ({ Setaimodal, aimodal }) => {
                                     text="Ask anything. I’ll do my best to help"
                                     encryptedClassName="text-neutral-500"
                                     revealedClassName="dark:text-white text-black"
-                                    revealDelayMs={50}
+                                    revealDelayMs={120}
                                 />)
                             }
                         </AnimatePresence>
