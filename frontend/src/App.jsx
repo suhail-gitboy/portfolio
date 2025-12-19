@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router"
 import { RouterProvider } from "react-router-dom"
 import Home from "./pages/Home"
-import Projects from "./pages/Projects"
+import { lazy } from "react"
+const Projects = lazy(() => import("./pages/Projects"))
 
-import Experience from "./pages/Experience"
-import Contact from "./pages/Contact"
-import AboutSection from "./pages/About"
+const Experience = lazy(() => import("./pages/Experience"))
+const Contact = lazy(() => import("./pages/Contact"))
+const AboutSection = lazy(() => import("./pages/About"))
+
 
 
 

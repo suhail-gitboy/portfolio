@@ -16,7 +16,7 @@ const GridDetails = () => {
         location: "India · Flexible to Gulf Time Zone",
         phone: "+91 7736777917",
         email: "suhailgti12@gmail.com",
-        image: "../../public/IMG_3595.jpg", // replace with your image
+        image: "/IMG_3595.jpg", // replace with your image
     };
 
 

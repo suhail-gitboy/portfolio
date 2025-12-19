@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, lazy } from 'react'
 import Header from '../components/Header'
 import SectionBio from '../components/SectionBio'
-import GridDetails from '../components/GridDetails'
-import Myprojects from '../components/Myprojects'
 import { useLocation } from 'react-router'
-import Mystack from '../components/Mystack'
-import WorkExperience from '../components/Work'
+
+const GridDetails = lazy(() => import('../components/GridDetails'))
+const Myprojects = lazy(() => import('../components/Myprojects'))
+const Mystack = lazy(() => import('../components/Mystack'))
+const WorkExperience = lazy(() => import('../components/Work'))
 import { SiMinutemailer } from "react-icons/si";
 import Watiprovide from '../components/Watiprovide'
 import AImodal from '../components/AImodal'
@@ -37,7 +38,7 @@ const Home = () => {
       <Watiprovide />
 
       <div className="fixed z-50 right-4 bottom-6 ">
-        <div onClick={() => Setaimodal(!Almodal)} className="flex items-center  rounded-full py-2 px-2 bg-white text-black font-sans  shadow-3xl shadow-violet-600">
+        <div onClick={() => Setaimodal(!Almodal)} className="flex items-center  rounded-full py-2 px-2 bg-linear-to-br text-sm text-white from-blue-600 to-rose-600 font-sans  shadow-3xl shadow-violet-600">
 
           <p
             className={`
@@ -51,7 +52,7 @@ const Home = () => {
             Ask about me
           </p>
 
-          <SiMinutemailer onClick={() => Setaimodal(!Almodal)} className={`text-3xl  duration-700 transition-all ${Almodal == true ? "rotate-360" : "rotate-0"} `} />
+          <SiMinutemailer onClick={() => Setaimodal(!Almodal)} className={`text-xl md:text-3xl  duration-700 transition-all ${Almodal == true ? "rotate-360" : "rotate-0"} `} />
         </div>
       </div>
       <AnimatePresence>
