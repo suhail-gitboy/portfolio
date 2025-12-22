@@ -5,20 +5,28 @@ import { AinputPost } from '../Services/AllAiservices';
 import { IoClose } from "react-icons/io5";
 import { EncryptedText } from '../ui/Encrypted';
 
+import { LoaderOne } from '../ui/Loader';
 const AImodal = ({ Setaimodal, aimodal }) => {
 
     const [userInput, Setuserinput] = useState("")
     const [messages, Setmessages] = useState([])
-
+    const [loading, Setloading] = useState(false)
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages, loading]);
 
     const Aidatasubmit = async () => {
+        Setloading(true)
 
         Setmessages([...messages, { type: "user", text: userInput }])
         window.scrollTo()
         try {
             const Response = await AinputPost(userInput)
-            console.log(Response)
-            Setmessages(prev => [...prev, { type: "ai", text: Response.data.answer }])
+
+            if (Response.status == 200) {
+                Setloading(false)
+                Setmessages(prev => [...prev, { type: "ai", text: Response.data.answer }])
+            }
 
             console.log(messages);
         } catch (error) {
@@ -29,11 +37,7 @@ const AImodal = ({ Setaimodal, aimodal }) => {
 
     }
     const bottomRef = useRef(null)
-    useEffect(() => {
-        bottomRef.current?.scrollIntoView({
-            behavior: "smooth"
-        });
-    }, [messages]);
+
 
 
     return (
@@ -52,14 +56,21 @@ const AImodal = ({ Setaimodal, aimodal }) => {
                             {
                                 messages.length > 0 ? (
 
+                                    <>
+                                        {messages.map((data, id) => (
+                                            <motion.div initial={{ opacity: 1, x: data.type == "ai" ? -15 : 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} key={id} className={`flex space-y-2 w-full ${data.type == "ai" ? "justify-start" : "justify-end"}`}>
+                                                <h3 className={`px-3 text-xs md:text-sm font-sans py-3 whitespace-pre-line max-w-3/5 rounded-md mb-2  ${data.type == "ai" ? "bg-blue-600 text-white" : "bg-gray-700 text-gray-400"}`}>{data.text}</h3>
+
+                                            </motion.div>
+
+                                        ))}
+                                        {loading && <div className='flex justify-start'>
+                                            <LoaderOne />
+                                        </div>}
+                                        <div ref={bottomRef} />
+                                    </>
 
 
-                                    messages.map((data, id) => (
-                                        <motion.div initial={{ opacity: 1, x: data.type == "ai" ? -15 : 15 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} key={id} className={`flex space-y-2 w-full ${data.type == "ai" ? "justify-start" : "justify-end"}`}>
-                                            <h3 className={`px-3 text-md font-sans py-3 max-w-3/5 rounded-md mb-2  ${data.type == "ai" ? "bg-blue-600 text-white" : "bg-gray-700 text-gray-400"}`}>{data.text}</h3>
-                                        </motion.div>
-
-                                    ))
 
 
 
@@ -67,7 +78,7 @@ const AImodal = ({ Setaimodal, aimodal }) => {
                                     text="Ask anything. I’ll do my best to help"
                                     encryptedClassName="text-neutral-500"
                                     revealedClassName="dark:text-white text-black"
-                                    revealDelayMs={120}
+                                    revealDelayMs={70}
                                 />)
                             }
                         </AnimatePresence>
