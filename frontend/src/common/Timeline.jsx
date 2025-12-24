@@ -168,7 +168,7 @@ export function TimelineDemo() {
                             alt="HTML CSS practice"
                         />
                         <img
-                            src="/IMG_4770 2.jpg"
+                            src="/IMG_4673 2.jpg"
                             className="rounded-lg object-cover h-72 w-full"
                             alt="Web basics"
                         />
@@ -195,17 +195,17 @@ export function TimelineDemo() {
                     {/* Images */}
                     <div className="grid grid-cols-3 gap-4">
                         <img
-                            src="../../public/IMG_7162.jpg"
+                            src="/IMG_7162.jpg"
                             className="rounded-lg object-cover h-72 w-full"
                             alt="React code"
                         />
                         <img
-                            src="../../public/IMG_7164.jpg"
+                            src="/IMG_7164.jpg"
                             className="rounded-lg object-cover h-72 w-full"
                             alt="React UI"
                         />
                         <img
-                            src="../../public/IMG_7165.jpg"
+                            src="/public/IMG_7165.jpg"
                             className="rounded-lg object-cover h-72 w-full"
                             alt="Frontend components"
                         />
