@@ -145,7 +145,7 @@ export function TimelineDemo() {
     // ];
     const data = [
         {
-            title: "Early 2023 – Computer Science & Web Basics",
+            title: "Early 2024 – Computer Science & Web Basics",
             content: (
                 <div>
                     <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
@@ -178,7 +178,7 @@ export function TimelineDemo() {
         },
 
         {
-            title: "Mid 2023 – Frontend Development with React",
+            title: "Mid 2024 – Frontend Development with React",
             content: (
                 <div>
                     <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
@@ -205,7 +205,7 @@ export function TimelineDemo() {
                             alt="React UI"
                         />
                         <img
-                            src="/public/IMG_7165.jpg"
+                            src="/IMG_7165.jpg"
                             className="rounded-lg object-cover h-72 w-full"
                             alt="Frontend components"
                         />
@@ -215,7 +215,7 @@ export function TimelineDemo() {
         },
 
         {
-            title: "Late 2024 – Backend & MERN Stack Development",
+            title: "early 2025 – Backend & MERN Stack Development",
             content: (
                 <div>
                     <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
