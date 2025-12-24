@@ -148,13 +148,13 @@ export function TimelineDemo() {
             title: "Early 2023 – Computer Science & Web Basics",
             content: (
                 <div>
-                    <p className="mb-6 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+                    <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
                         I completed my Bachelor of Computer Science from Bangalore North University
                         (2023–2025). I began my journey with HTML, CSS, and JavaScript, learning how
                         websites work from the ground up.
                     </p>
 
-                    <p className="mb-6 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+                    <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
                         Initially, layout building, responsive design, and CSS positioning were
                         challenging. Over time, I developed confidence by practicing real UI layouts
                         and understanding browser behavior.
@@ -181,13 +181,13 @@ export function TimelineDemo() {
             title: "Mid 2023 – Frontend Development with React",
             content: (
                 <div>
-                    <p className="mb-6 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+                    <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
                         I transitioned into React and learned component-based architecture, hooks,
                         routing, and reusable UI patterns. I focused on writing clean, maintainable
                         frontend code.
                     </p>
 
-                    <p className="mb-6 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+                    <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
                         I worked extensively with forms, validations, API integrations, lazy loading,
                         and state management to build interactive and responsive applications.
                     </p>
@@ -218,17 +218,17 @@ export function TimelineDemo() {
             title: "Late 2024 – Backend & MERN Stack Development",
             content: (
                 <div>
-                    <p className="mb-6 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+                    <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
                         To become a complete full-stack developer, I started learning Node.js,
                         Express.js, and MongoDB. I focused on backend architecture, REST APIs, and
                         database design.
                     </p>
 
                     <ul className="mb-6 list-disc ml-4 text-xs md:text-sm text-neutral-700 dark:text-neutral-300">
-                        <li>JWT authentication & authorization</li>
-                        <li>Mongoose schemas, relations & indexing</li>
-                        <li>Error handling & middleware</li>
-                        <li>Frontend–backend API integration</li>
+                        <li className="fontsans">JWT authentication & authorization</li>
+                        <li className="fontsans">Mongoose schemas, relations & indexing</li>
+                        <li className="fontsans">Error handling & middleware</li>
+                        <li className="fontsans">Frontend–backend API integration</li>
                     </ul>
 
                     {/* Images */}
@@ -252,16 +252,16 @@ export function TimelineDemo() {
             title: "2025 – Real Projects, Internship & Advanced Skills",
             content: (
                 <div>
-                    <p className="mb-6 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+                    <p className="mb-6 font-sans text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
                         In 2025, I joined Luminar Technolab as an intern, where I worked on real-world
                         MERN stack projects following professional development practices.
                     </p>
 
                     <ul className="mb-6 list-disc ml-4 text-xs md:text-sm text-neutral-700 dark:text-neutral-300">
-                        <li>Complete MERN applications (Auth, CRUD, chat, dashboards)</li>
-                        <li>Role-based access & file uploads</li>
-                        <li>Axios instances, API optimization</li>
-                        <li>Learning TypeScript & basic system design</li>
+                        <li className="fontsans">Complete MERN applications (Auth, CRUD, chat, dashboards)</li>
+                        <li className="fontsans">Role-based access & file uploads</li>
+                        <li className="fontsans">Axios instances, API optimization</li>
+                        <li className="fontsans">Learning TypeScript & basic system design</li>
                     </ul>
 
                     {/* Images */}
