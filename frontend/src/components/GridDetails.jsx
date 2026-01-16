@@ -28,11 +28,11 @@ const GridDetails = () => {
                 {/* left */}
                 <div className="col-span-2 bg-neutral-900 h-auto overflow-hidden  p-3 border mb-2 md:mb-0 border-white/10 rounded-md ">
                     <div className="h-fit md:h-auto w-full p-2">
-                        <h1 className="text-xl mb-1 text-neutral-600">
-                            Full Stack Web Developer <span className="text-blue-600">(MERN / Next.js)</span>
+                        <h1 className="text-xl  mb-1 text-neutral-200">
+                            Full Stack Web Developer <span className="text-blue-400">(MERN / Next.js)</span>
                         </h1>
 
-                        <h1 className="text-md text-gray-200 font-sans">
+                        <h1 className="text-md text-gray-300 font-sans">
                             Web developer intern focused on building scalable applications and learning real-world system design.
                         </h1>
 

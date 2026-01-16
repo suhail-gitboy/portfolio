@@ -1,116 +1,83 @@
 import express from "express"
 import { AiPostdata } from "./controllers/Alcontroller.js"
 import nodemailer from "nodemailer"
-
+import { Resend } from "resend";
 export const Mainrouter = express.Router()
-Mainrouter.post("/message/about", (req, res) => {
-  const { name, email, message } = req.body
 
-  console.log(name, email);
+
+
+
+Mainrouter.post("/message/about", async (req, res) => {
+  const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
-    return res.status(400).json("fill the details")
+    return res.status(400).json({ error: "All fields are required" });
   }
 
-
   try {
-    // Create a test account or replace with real credentials.
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: "suhailgti12@gmail.com",
-        pass: "dbif ffzu vrjp druf",
-      },
-    });
+    const resend = new Resend(process.env.RESENDAPI);
 
-    // Wrap in an async IIFE so we can use await.
-    (async () => {
-      const info = await transporter.sendMail({
-        from: `${name} <${email}>`,
-        to: "suhailgti12@gmail.com",
-        subject: "Hello ,",
-        text: `this is ${name} i came a cross your portfolio so that i want to message you.
-            ${message}  
-            
-            
-            ${email}
-            `, // plain‑text body
-        html: `
-<div style="background-color:#f3f4f6;padding:40px;font-family:Inter,Arial,sans-serif">
-  <div style="max-width:620px;margin:auto;background:#ffffff;border-radius:14px;
-              box-shadow:0 20px 40px rgba(0,0,0,0.08);overflow:hidden">
+    await resend.emails.send({
+      from: "Suhail Portfolio <contact@yourdomain.com>", // VERIFIED DOMAIN
+      to: ["suhailgti12@gmail.com"], // YOU receive the mail
+      reply_to: email, // user replies come here
+      subject: "New message from portfolio contact form",
+      text: `
+You have received a new message from your portfolio.
 
-    <!-- Header -->
-    <div style="background:linear-gradient(135deg,#111827,#1f2933);padding:26px">
-      <h2 style="color:#ffffff;margin:0;font-size:22px;font-weight:600;letter-spacing:0.6px">
-        New Contact Message
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+      `,
+      html: `
+<div style="background:#f3f4f6;padding:40px;font-family:Inter,Arial,sans-serif">
+  <div style="max-width:600px;margin:auto;background:#ffffff;border-radius:12px;
+              box-shadow:0 10px 30px rgba(0,0,0,0.08);overflow:hidden">
+
+    <div style="background:#111827;padding:24px">
+      <h2 style="color:#ffffff;margin:0;font-size:20px">
+        New Portfolio Message
       </h2>
-      <p style="margin:6px 0 0;color:#d1d5db;font-size:13px">
-        You’ve received a new inquiry via your portfolio
+      <p style="color:#d1d5db;margin-top:6px;font-size:13px">
+        Someone contacted you through your portfolio
       </p>
     </div>
 
-    <!-- Body -->
-    <div style="padding:28px;color:#374151">
+    <div style="padding:24px;color:#374151">
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
 
-      <!-- Sender Info -->
-      <table style="width:100%;border-collapse:collapse;margin-bottom:22px">
-        <tr>
-          <td style="padding:8px 0;font-size:14px;width:90px;color:#6b7280">
-            Name
-          </td>
-          <td style="padding:8px 0;font-size:14px;font-weight:500">
-            ${name}
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:8px 0;font-size:14px;color:#6b7280">
-            Email
-          </td>
-          <td style="padding:8px 0;font-size:14px;font-weight:500">
-            ${email}
-          </td>
-        </tr>
-      </table>
-
-      <!-- Message -->
-      <div style="margin-top:10px">
-        <p style="font-size:14px;font-weight:600;margin-bottom:10px;color:#111827">
-          Message Details
-        </p>
-        <div style="background:#f9fafb;border:1px solid #e5e7eb;
-                    padding:18px;border-radius:10px;
-                    font-size:14px;line-height:1.7;color:#374151">
-          ${message}
-        </div>
+      <p style="margin-top:16px"><strong>Message:</strong></p>
+      <div style="background:#f9fafb;border:1px solid #e5e7eb;
+                  padding:16px;border-radius:8px;line-height:1.6">
+        ${message}
       </div>
-
     </div>
 
-    <!-- Footer -->
-    <div style="background:#f9fafb;padding:16px;text-align:center;
+    <div style="background:#f9fafb;padding:14px;text-align:center;
                 font-size:12px;color:#6b7280">
-      This message was securely sent from your portfolio contact form.
-      <br />
-      <span style="color:#9ca3af">© ${new Date().getFullYear()} Your Portfolio</span>
+      © ${new Date().getFullYear()} Suhail Portfolio
     </div>
 
   </div>
 </div>
-`
-        // HTML body
-      });
-      return res.status(200).json("sent mail to suhail,will replay you soon")
-      console.log("Message sent:", info.messageId);
-    })();
+      `,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "Message sent successfully. I will get back to you soon.",
+    });
+
   } catch (error) {
-
-    return res.json(error)
-
+    console.error("Resend error:", error);
+    return res.status(500).json({
+      error: "Failed to send message. Please try again later.",
+    });
   }
+});
 
-})
 
 Mainrouter.post("/chat/save", AiPostdata)

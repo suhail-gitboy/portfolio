@@ -7,10 +7,11 @@ import dotenv from "dotenv"
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: ["http://localhost:5173", "http://localhost:5174", "https://portfolio-jf7f.vercel.app"],
     methods: ["GET", "POST"],
 
     allowedHeaders: ["Content-Type", "Authorization"],
+
 }))
 
 import "./config/Database.js"

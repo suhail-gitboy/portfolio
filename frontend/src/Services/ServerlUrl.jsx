@@ -1,1 +1,1 @@
-export const ServerURL = "http://localhost:8700"
+export const ServerURL = "https://portfolio-jcve.onrender.com"

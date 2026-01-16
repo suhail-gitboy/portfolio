@@ -49,9 +49,9 @@ const Header = () => {
             </GradientText></p> <MdArrowForwardIos className='text-white/50 ml-2 text-md' />
           </motion.a>
 
-          <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className='text-3xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className=' md:text-6xl bg-clip-text md:text-transparent md:bg-linear-to-b  text-violet-600 from-neutral-200  md:to-neutral-700'> User Experience   </i></motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className='text-2xl sm:text-3xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className='text-2xl md:text-6xl bg-clip-text md:text-transparent md:bg-linear-to-b  text-violet-600 from-neutral-200  md:to-neutral-700'> User Experience   </i></motion.h1>
 
-          <div className='flex flex-col w-fit mt-20  p-4 rounded-md '>
+          <div className='flex flex-col w-fit mt-10 md:20 p-4 rounded-md '>
             {/* <p className="mx-auto max-w-lg py-5 text-left">
       <EncryptedText
         text="Ameer suhail,what i have studied,what text stack i know and for more "
