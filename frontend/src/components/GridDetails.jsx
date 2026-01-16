@@ -5,19 +5,21 @@ import { CardSpotlight } from "../ui/Cardsportlight"
 import { IconMessage } from "@tabler/icons-react"
 import { MdOutlineMailOutline } from "react-icons/md"
 import Globedata from "../Subcompoenets/Globedata"
-
+import { useNavigate } from "react-router"
 
 const GridDetails = () => {
 
     const profile = {
         name: "Ameer Suhail",
         role: "Full-Stack Developer",
-        stack: "MERN + DevOps",
+        stack: "MERN | AI",
         location: "India · Flexible to Gulf Time Zone",
         phone: "+91 7736777917",
         email: "suhailgti12@gmail.com",
         image: "/IMG_3595.jpg", // replace with your image
     };
+
+    const Navigate = useNavigate()
 
 
     return (
@@ -26,16 +28,51 @@ const GridDetails = () => {
                 {/* left */}
                 <div className="col-span-2 bg-neutral-900 h-auto overflow-hidden  p-3 border mb-2 md:mb-0 border-white/10 rounded-md ">
                     <div className="h-fit md:h-auto w-full p-2">
-                        <h1 className="text-xl mb-1 text-neutral-600">Ai Assistand Developer</h1>
-                        <h1 className="text-md text-gray-200 font-sans">the enthusiastic mindset to build unique projects. </h1>
+                        <h1 className="text-xl mb-1 text-neutral-600">
+                            Full Stack Web Developer <span className="text-blue-600">(MERN / Next.js)</span>
+                        </h1>
+
+                        <h1 className="text-md text-gray-200 font-sans">
+                            Web developer intern focused on building scalable applications and learning real-world system design.
+                        </h1>
 
                         <div className="mt-10">
-                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center"><MdArrowForwardIos className="mr-1" />ameer.suhail init</p>
-                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center"><MdArrowForwardIos className="mr-1" />role:fullstack web developer</p>
-                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center"><MdArrowForwardIos className="mr-1" />Focus:crafting scalable,modern Web apps</p>
-                            <p className="text-gray-400 text-sm mb-1 font-sans flex flex-row md:flex-col lg:flex-row md:items-center "><MdArrowForwardIos className="mr-1" />Status:available <p className="font-sans mx-1 text-blue-600">for</p>freelance & Full time
+                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center">
+                                <MdArrowForwardIos className="mr-1" />
+                                Name: Suhail Ameer
+                            </p>
+
+                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center">
+                                <MdArrowForwardIos className="mr-1" />
+                                Current Role: Web Developer Intern
+                            </p>
+
+                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center">
+                                <MdArrowForwardIos className="mr-1" />
+                                Tech Stack: MERN, Next.js, Tailwind CSS, Node.js
+                            </p>
+
+                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center">
+                                <MdArrowForwardIos className="mr-1" />
+                                Experience: Built scalable full-stack web applications with authentication, APIs, and dashboards
+                            </p>
+
+                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center">
+                                <MdArrowForwardIos className="mr-1" />
+                                Current Focus: Building AI-powered apps using RAG, vector databases, and modern AI models
+                            </p>
+
+                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center">
+                                <MdArrowForwardIos className="mr-1" />
+                                Learning Goals: System design, scalable backend architecture, RAG pipelines, and new web technologies
+                            </p>
+
+                            <p className="text-gray-400 text-sm mb-1 font-sans flex items-center">
+                                <MdArrowForwardIos className="mr-1" />
+                                Availability: Open to full-time roles, internships, and freelance opportunities
                             </p>
                         </div>
+
                         <div className="mt-4 w-full flex justify-center items-center h-50 relative overflow-hidden">
                             <img src="/docker-svgrepo-com.svg" className="w-9 h-9 float-xy float-delay-1" />
                             <img src="/js-svgrepo-com.svg" className="w-9 h-9 float-xy float-delay-2" />
@@ -44,11 +81,9 @@ const GridDetails = () => {
                             <img src="/vite.svg" className="w-9 h-9 float-xy float-delay-5" />
                             <img src="/tailwind-svgrepo-com.svg" className="w-9 h-9 float-xy float-delay-6" />
                             <img src="/node-js-svgrepo-com.svg" className="w-9 h-9 float-xy float-delay-7" />
-
                         </div>
-
-
                     </div>
+
                 </div>
 
                 <div className="col-span-4 flex flex-col gap-2 ">
@@ -97,8 +132,8 @@ const GridDetails = () => {
                                     </div>
 
                                     {/* CTA */}
-                                    <button className="mt-6 w-full rounded-xl bg-gradient-to-r font-sans from-blue-500 to-blue-800 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]">
-                                        DM Me
+                                    <button onClick={() => Navigate("/contact")} className="mt-6 w-full rounded-xl bg-gradient-to-r font-sans from-blue-500 to-blue-800 py-3 text-sm font-semibold text-white transition hover:scale-[1.02]">
+                                        reach
                                     </button>
                                 </div>
                             </section>

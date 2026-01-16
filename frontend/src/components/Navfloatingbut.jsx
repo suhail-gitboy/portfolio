@@ -37,9 +37,9 @@ export function FloatingDockDemo() {
       onClick: () => Navigate("/experience"),
     },
     {
-      title: "Community",
+      title: "Contact",
       icon: <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-      onClick: () => Navigate("/community"),
+      onClick: () => Navigate("/contact"),
     },
   ];
   return (

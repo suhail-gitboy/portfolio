@@ -13,3 +13,8 @@ export const AinputPost = async (data) => {
 }
 
 
+export const MessageUpload = async (data) => {
+    const Response = await Commonapi(`${ServerURL}/message/about`, "POST", data)
+}
+
+

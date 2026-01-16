@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className='bg-black'>
       <Header />
-      <SectionBio Setaimodal={Setaimodal} />
+
       <GridDetails />
       <Myprojects />
       <Mystack />

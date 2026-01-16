@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from '../common/Nav'
 import Galaxy from '../reactbit/Bg';
-import { FlipWords } from '../ui/Flipword';
+
 import GradientText from "../reactbit/Gradient"
 import { IoArrowRedoOutline, IoArrowRedoSharp } from "react-icons/io5";
 // For a smoother animation, the gradient should start and end with the same color
@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router';
 import TextType from "../ui/Texttype";
 import { AnimatedTooltip } from '../ui/Tooltiptwo';
 import { motion } from 'motion/react';
+import { Github, Linkedin, Mail, Instagram, InstagramIcon } from "lucide-react";
 
 const people = [
   {
@@ -44,11 +45,11 @@ const Header = () => {
               showBorder={false}
               className="border-none"
             >
-              projects launched!
+              visit projects!
             </GradientText></p> <MdArrowForwardIos className='text-white/50 ml-2 text-md' />
           </motion.a>
 
-          <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className='text-3xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className=' md:text-6xl'>    <FlipWords words={Datas} /> </i></motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className='text-3xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className=' md:text-6xl bg-clip-text md:text-transparent md:bg-linear-to-b  text-violet-600 from-neutral-200  md:to-neutral-700'> User Experience   </i></motion.h1>
 
           <div className='flex flex-col w-fit mt-20  p-4 rounded-md '>
             {/* <p className="mx-auto max-w-lg py-5 text-left">
@@ -59,19 +60,38 @@ const Header = () => {
         revealDelayMs={30}
       />
     </p> */}
-            <div className='mb-3 mt-4 flex mx-auto items-center space-x-3 text-white/70'>
-              <motion.h3 initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className='text-xl md:text-xl font-extralight text-center flex flex-col md:flex-row items-center space-x-3 font-sans'><span className='mr-4 '> <AnimatedTooltip items={people} className="mr-3" /></span> Ameer suhail</motion.h3>
-              <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}><GradientText
-                colors={["#A9A9A9", "#D1D5DB", "#8B5CF6", "#A9A9A9", "#8B5CF6"]}
 
-                animationSpeed={3}
-                showBorder={false}
-                className="hidden md:flex text-xl md:text-xl font-sans"
-              >
-                Fullstack Dev!
-              </GradientText></motion.div>
+            <div className=" flex flex-col
+            items-center">
+              <div className='mb-3 mt-4 flex mx-auto items-center space-x-3 text-white/70'>
+                <motion.h3 initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className='text-xl md:text-xl font-extralight text-center flex flex-col md:flex-row items-center space-x-3 font-sans'><span className='mr-4 '> <AnimatedTooltip items={people} className="mr-3" /></span> Ameer suhail</motion.h3>
+                <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}><GradientText
+                  colors={["#A9A9A9", "#D1D5DB", "#8B5CF6", "#A9A9A9", "#8B5CF6"]}
 
+                  animationSpeed={3}
+                  showBorder={false}
+                  className="hidden md:flex text-xl md:text-xl font-sans"
+                >
+                  Fullstack Dev!
+                </GradientText></motion.div>
+
+              </div>
+              <div className="flex items-center gap-4 pb-2 py-2">
+                <a className="hover:text-purple-500 text-white transition" href="https://www.linkedin.com/in/ameer-suhail-78aa40303/">
+                  <Linkedin />
+                </a>
+                <a href="https://github.com/" className="hover:text-purple-500 text-white transition" >
+                  <Github />
+                </a>
+                <a className="hover:text-purple-500 transition text-white" href="#">
+                  <Mail />
+                </a>
+                <a className="hover:text-purple-500 text-white transition" href="#">
+                  <InstagramIcon />
+                </a>
+              </div>
             </div>
+
 
             <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className=' flex mx-auto space-x-3'>
               <button className='flex items-center text-md md:text-xl text-gray-300 font-sans  border rounded-full px-4 py-2 border-gray-700'>Lets Connect <MdArrowForwardIos className='ml-1' /></button>
@@ -87,9 +107,9 @@ const Header = () => {
         <Galaxy
           mouseRepulsion={true}
           mouseInteraction={true}
-          density={0.5}
+          density={0.2}
           glowIntensity={0.2}
-          saturation={0.4}
+          saturation={0.2}
           hueShift={240}
         />
       </div>

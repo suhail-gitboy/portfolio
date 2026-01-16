@@ -3,6 +3,26 @@ import { SparklesCore } from '../ui/Sparkle'
 import { AnimatePresence, motion } from 'motion/react'
 
 const Mystack = () => {
+
+    const container = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.06,
+            },
+        },
+    }
+
+    const item = {
+        hidden: { opacity: 0, scale: 0.9, y: 6 },
+        show: {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: { duration: 0.25, ease: "easeOut" },
+        },
+    }
+
     return (
         <div className='pt-40 pb-30'>
 
@@ -39,45 +59,84 @@ const Mystack = () => {
             </div>
             <div className='-mt-10 px-4 flex flex-col justify-center items-center'>
                 <AnimatePresence>
-                    <div className="grid grid-cols-2 md:flex items-center justify-center gap-2 w-full md:px-10 lg:px-30 ">
+                    <motion.div
+                        variants={container}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-2 md:flex items-center justify-center gap-2 w-full md:px-10 lg:px-30"
+                    >
+                        {[
+                            ["/html-5-svgrepo-com.svg", "HTML"],
+                            ["/css-3-svgrepo-com.svg", "CSS"],
+                            ["/js-svgrepo-com (1).svg", "JavaScript"],
+                            ["/typescript-svgrepo-com.svg", "TypeScript"],
+                            ["/reactjs-svgrepo-com.svg", "React"],
+                            ["/tailwind-svgrepo-com.svg", "Tailwind CSS"],
+                        ].map(([icon, label]) => (
+                            <motion.p
+                                key={label}
+                                variants={item}
+                                className="flex items-center justify-center rounded-full py-2 px-3 text-md font-sans
+      border text-white/70 border-white/20
+      transition-all duration-300 hover:scale-[1.04] hover:border-white"
+                            >
+                                <img src={icon} className="w-6 h-6 mr-1" />
+                                {label}
+                            </motion.p>
+                        ))}
+                    </motion.div>
 
-                        <motion.p initial={{ opacity: 0, scale: 0.7 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/html-5-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />Html</motion.p>
-                        <motion.p initial={{ opacity: 0, scale: 0.7 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/css-3-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />css</motion.p>
-                        <motion.p initial={{ opacity: 0, scale: 0.7 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/js-svgrepo-com (1).svg" alt="" className='w-6 h-6 mr-1' />Javascript</motion.p>
-                        <motion.p initial={{ opacity: 0, scale: 0.7 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/typescript-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />Typescript</motion.p>
-                        <motion.p initial={{ opacity: 0, scale: 0.7 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/reactjs-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />React js</motion.p>
-                        <motion.p initial={{ opacity: 0, scale: 0.7 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 text-nowrap hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/tailwind-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />Tailwind css</motion.p>
-
-
-
-
-                    </div>
                 </AnimatePresence>
-                <div className="grid grid-cols-2 gap-2 md:flex items-center justify-center flex-wrap py-4 md:gap-6 w-full md:px-6 lg:px-20">
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/framermotion.svg" alt="" className='w-6 h-6 mr-1' />Framer-motion</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/asceratinity ui.jpg" alt="" className='w-6 h-6 mr-1' />Ascertainity-ui</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/node-js-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />Node-js</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/express.jpeg" alt="" className='w-6 h-6 mr-1' />Express</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/mongodb-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />MongoDB</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 text-nowrap hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/github-logo-white-stroke-2a6c.png" alt="" className='w-6 h-6 mr-1' />github</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 text-nowrap hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/vercel.jpg" alt="" className='w-6 h-6 mr-1' />Vercel</p>
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-2 md:flex flex-wrap items-center justify-center gap-2 py-4 w-full md:px-6 lg:px-20"
+                >
+                    {[
+                        ["/framermotion.svg", "Framer Motion"],
+                        ["/asceratinity ui.jpg", "Ascertainity UI"],
+                        ["/node-js-svgrepo-com.svg", "Node.js"],
+                        ["/express.jpeg", "Express"],
+                        ["/mongodb-svgrepo-com.svg", "MongoDB"],
+                        ["/github-logo-white-stroke-2a6c.png", "GitHub"],
+                        ["/vercel.jpg", "Vercel"],
+                    ].map(([icon, label]) => (
+                        <motion.p key={label} variants={item} className="badge flex items-center justify-center rounded-full py-2 px-3 text-md font-sans
+      border text-white/70 border-white/20
+      transition-all duration-300 hover:scale-[1.04] hover:border-white">
+                            <img src={icon} className="w-6 h-6 mr-1" />
+                            {label}
+                        </motion.p>
+                    ))}
+                </motion.div>
 
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-2 md:flex items-center justify-center gap-2 w-full md:px-10 lg:px-30"
+                >
+                    {[
+                        ["/postman-icon-svgrepo-com.svg", "Postman"],
+                        ["/npm-svgrepo-com.svg", "NPM"],
+                        ["/docker-svgrepo-com.svg", "Docker"],
+                        ["/redux-svgrepo-com.svg", "Redux"],
+                        ["/splash-light.png", "TanStack"],
+                        ["/material-ui-svgrepo-com.svg", "MUI"],
+                    ].map(([icon, label]) => (
+                        <motion.p key={label} variants={item} className="badge flex items-center justify-center rounded-full py-2 px-3 text-md font-sans
+      border text-white/70 border-white/20
+      transition-all duration-300 hover:scale-[1.04] hover:border-white">
+                            <img src={icon} className="w-6 h-6 mr-1" />
+                            {label}
+                        </motion.p>
+                    ))}
+                </motion.div>
 
-
-
-                </div>
-                <div className="grid grid-cols-2 md:flex items-center justify-center gap-2 w-full md:px-10 lg:px-30 ">
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/postman-icon-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />postman</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/npm-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />Npm</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/docker-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />Docker</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/redux-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />Redux </p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/splash-light.png" alt="" className='w-6 h-6 mr-1' />Tanstack</p>
-                    <p className='flex items-center justify-center rounded-full py-2 px-3 text-md font-sans hover:scale-102 text-nowrap hover:rotate-5 hover:border-white transition-all duration-300 border text-white/70 border-white/20 '><img src="/material-ui-svgrepo-com.svg" alt="" className='w-6 h-6 mr-1' />Mui</p>
-
-
-
-
-                </div>
 
             </div>
 
