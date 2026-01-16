@@ -14,6 +14,7 @@ import TextType from "../ui/Texttype";
 import { AnimatedTooltip } from '../ui/Tooltiptwo';
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, Instagram, InstagramIcon } from "lucide-react";
+import useIsMobile from '../common/Ismobile';
 
 const people = [
   {
@@ -27,6 +28,8 @@ const people = [
 const Datas = ["UI experience.", "Innovations.", "Automations.", "Productivity."]
 const Header = () => {
   const Navigate = useNavigate()
+
+  const isMobile = useIsMobile()
   return (
     <div className=' md:h-screen relative '>
       <Nav />
@@ -104,14 +107,16 @@ const Header = () => {
 
 
       <div style={{ position: 'absolute' }} className=" h-full bg-linear-to-b border border-b rounded rounded-b-4xl from-black to-gray-900  top-0 left-0 right-0">
-        <Galaxy
-          mouseRepulsion={true}
-          mouseInteraction={true}
-          density={0.2}
-          glowIntensity={0.2}
-          saturation={0.2}
-          hueShift={240}
-        />
+        {
+          !isMobile && <Galaxy
+            mouseRepulsion={true}
+            mouseInteraction={true}
+            density={0.2}
+            glowIntensity={0.2}
+            saturation={0.2}
+            hueShift={240}
+          />
+        }
       </div>
 
 

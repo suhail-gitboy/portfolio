@@ -15,22 +15,28 @@ const AImodal = ({ Setaimodal, aimodal }) => {
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages, loading]);
 
-    const Aidatasubmit = async () => {
+    const Aidatasubmit = async (text) => {
         Setloading(true)
 
-        Setmessages([...messages, { type: "user", text: userInput }])
+        Setmessages([...messages, { type: "user", text: text }])
         window.scrollTo()
+        Setuserinput("")
         try {
-            const Response = await AinputPost(userInput)
+            const Response = await AinputPost(text)
 
             if (Response.status == 200) {
                 Setloading(false)
                 Setmessages(prev => [...prev, { type: "ai", text: Response.data.answer }])
+            } else {
+                Setloading(false)
+
             }
 
             console.log(messages);
         } catch (error) {
+            Setloading(false)
             console.log(error);
+            alert("server is low")
 
         }
 
@@ -74,12 +80,19 @@ const AImodal = ({ Setaimodal, aimodal }) => {
 
 
 
-                                ) : (<EncryptedText
-                                    text="Ask anything. I’ll do my best to help"
-                                    encryptedClassName="text-neutral-500"
-                                    revealedClassName="dark:text-white text-black"
-                                    revealDelayMs={70}
-                                />)
+                                ) : (<>
+                                    <EncryptedText
+                                        text="Ask anything. I’ll do my best to help"
+                                        encryptedClassName="text-neutral-500"
+                                        revealedClassName="dark:text-white text-black"
+                                        revealDelayMs={70}
+                                    />
+                                    <div className='mt-4  w-fit  flex flex-col space-y-2 justify-center'>
+                                        <p onClick={() => Aidatasubmit("who is ameer suhail?")} className='rounded-xl bg-linear-to-br from-blue-800 to-purple-600  text-white text-xs font-sans py-2 px-4'>who is ameer suhail?</p>
+                                        <p onClick={() => Aidatasubmit("what skills he know?")} className='rounded-xl bg-linear-to-br from-violet-800 to-purple-600 text-white text-xs font-sans py-2 px-4'>what skills he know?</p>
+                                    </div>
+
+                                </>)
                             }
                         </AnimatePresence>
                     </section>
@@ -91,7 +104,7 @@ const AImodal = ({ Setaimodal, aimodal }) => {
 
                     }} placeholder='Message...' className='py-2 w-full font-sans outline-0 ring-0 ' />
                     <div className='flex gap-2 flex-row-reverse'>
-                        <button onClick={() => Aidatasubmit()}> <PiTelegramLogoLight className='text-xl hover:text-white text-neutral-400' /></button>
+                        <button onClick={() => Aidatasubmit(userInput)}> <PiTelegramLogoLight className='text-xl hover:text-white text-neutral-400' /></button>
                         <button type='' onClick={() => Setuserinput("")} > <IoClose className='text-xl hover:text-white text-neutral-400' /></button>
 
                     </div>
