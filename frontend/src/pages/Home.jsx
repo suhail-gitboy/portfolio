@@ -11,6 +11,8 @@ import { SiMinutemailer } from "react-icons/si";
 import Watiprovide from '../components/Watiprovide'
 import AImodal from '../components/AImodal'
 import { AnimatePresence } from 'motion/react'
+import BeamManualDemo from '../components/Techavatars'
+import { TextAnimate } from '../ui/UI'
 const Home = () => {
 
   const [Almodal, Setaimodal] = useState(false
@@ -30,7 +32,23 @@ const Home = () => {
   return (
     <div className='bg-black'>
       <Header />
+      <div className="pt-45">
 
+        <div className="flex justify-center items-center">
+
+          <TextAnimate
+            as="p"
+            by="word"
+            delay={0.2}
+            className="text-white text-2xl mt-2"
+          >
+            The Ecosystem I Work In
+          </TextAnimate>
+
+
+        </div>
+        <BeamManualDemo />
+      </div>
       <GridDetails />
       <Myprojects />
       <Mystack />
