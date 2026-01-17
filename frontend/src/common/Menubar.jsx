@@ -46,7 +46,7 @@ const Menubar = ({ Setisnavopen }) => {
           <MenuItem to="/projects" label="Projects" delay={0.3} />
           <MenuItem to="/about" label="About" delay={0.4} />
           <MenuItem to="/experience" label="Experience" delay={0.5} />
-          <MenuItem to="/community" label="Community" delay={0.6} />
+          <MenuItem to="/contact" label="Reach me" delay={0.6} />
         </ul>
       </AnimatePresence>
     </div>

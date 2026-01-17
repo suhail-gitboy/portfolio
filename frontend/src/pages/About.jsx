@@ -70,12 +70,10 @@ export default function AboutSection() {
               <Link to="/projects" className="px-6 py-2 rounded-full border border-white/20 hover:border-purple-500 transition">
                 View Projects
               </Link>
-              <button className="px-6 py-2 rounded-full bg-purple-600 hover:bg-purple-700 transition">
-                Join Community
-              </button>
-              <button className="px-6 py-2 rounded-full border border-white/20 hover:border-pink-500 transition">
+
+              <Link to="/contact" className="px-6 py-2 rounded-full border border-white/20 hover:border-pink-500 transition">
                 Contact Me
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>
