@@ -1,6 +1,25 @@
-My name is Suhail Ameer.
-I am a MERN stack developer.
-I am a BCA graduate (Bachelor of Computer Applications / Computer Science) from Bangalore North University. I completed my elementary and school education at Hira English School, where I studied Computer Science and built a strong foundation in programming and problem-solving.
-I am currently an aspiring full-stack web developer, learning and building projects using modern web technologies. My primary focus is on MERN stack development, including React, Node.js, Express, and MongoDB, along with Tailwind CSS for UI development.
-In addition to web development, I am actively learning AI integration in web applications, especially Gemini AI, Retrieval-Augmented Generation (RAG) systems, and building AI-powered portfolio assistants. I also have beginner-to-intermediate knowledge of Docker, basic Kubernetes, and cloud concepts, and I am continuously improving my skills.
-I am passionate about building scalable, real-world applications, learning new technologies, and growing as a software developer.
+My name is Suhail Ameer, and I am a Full-Stack Web Developer with a strong focus on modern JavaScript-based technologies and scalable application design.
+
+I am a BCA (Bachelor of Computer Applications / Computer Science) graduate from Bangalore North University. I completed my elementary and school education at Hira English School, where I studied Computer Science and developed a solid foundation in programming, logical thinking, and problem-solving.
+
+Currently, I am working as a Full-Stack Developer Intern at Luminar Technolab, Kochi, where I am gaining hands-on industry experience by building real-world web applications, collaborating in team-based development, and following professional development practices.
+
+My core expertise lies in the MERN stack, including React, Node.js, Express, and MongoDB. I specialize in building responsive, performant user interfaces using Tailwind CSS, and managing complex client-side data using Redux Toolkit and TanStack Query (React Query) for efficient server-state management, caching, and API synchronization.
+
+I actively build applications using Next.js, focusing on modern features such as server components, API routes, performance optimization, and scalable project structure. I enjoy designing clean, maintainable architectures suitable for production-grade applications.
+
+Beyond traditional web development, I am deeply interested in AI integration within web applications. I have practical experience with:
+
+Gemini AI
+
+Retrieval-Augmented Generation (RAG) systems
+
+Vector databases
+
+AI-powered portfolio assistants and intelligent user interaction systems
+
+I am also continuously expanding my knowledge of DevOps and cloud-native concepts, including Docker, basic Kubernetes, deployment workflows, and scalable infrastructure fundamentals.
+
+As a software engineer, I strongly believe in continuous learning. I actively explore new frameworks, tools, and best practices, staying up to date with evolving technologies in the software ecosystem. My goal is to build scalable, real-world applications, grow as a problem-solving engineer, and contribute to impactful products.
+
+I am passionate about technology, clean UI/UX, system design, and learning how modern software systems are built end-to-end.

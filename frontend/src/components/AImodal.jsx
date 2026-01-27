@@ -124,7 +124,7 @@ const AImodal = ({ Setaimodal, aimodal }) => {
                                     <EncryptedText
                                         text="Ask anything. I’ll do my best to help"
                                         encryptedClassName="text-neutral-500"
-                                        revealedClassName="dark:text-white text-black"
+                                        revealedClassName="text-white"
                                         revealDelayMs={70}
                                     />
                                     <div className='mt-4  w-fit  flex flex-col space-y-2 justify-center'>

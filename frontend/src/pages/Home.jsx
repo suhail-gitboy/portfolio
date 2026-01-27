@@ -8,14 +8,15 @@ const Myprojects = lazy(() => import('../components/Myprojects'))
 const Mystack = lazy(() => import('../components/Mystack'))
 const WorkExperience = lazy(() => import('../components/Work'))
 import { SiMinutemailer } from "react-icons/si";
-
+const Timeline = lazy(() => import("../common/Timeline"))
 import Watiprovide from '../components/Watiprovide'
 import AImodal from '../components/AImodal'
 import { AnimatePresence } from 'motion/react'
 import BeamManualDemo from '../components/Techavatars'
 import { TextAnimate } from '../ui/UI'
-import { TimelineDemo } from '../common/Timeline'
+
 import Footer from '../common/Footer'
+import TimelineDemo from '../common/Timeline'
 const Home = () => {
 
   const [Almodal, Setaimodal] = useState(false
@@ -55,7 +56,7 @@ const Home = () => {
       <GridDetails />
       <Myprojects />
       <Mystack />
-      <div className="pt-20">
+      <div className="pt-20 bg-black">
         <TimelineDemo />
       </div>
       <WorkExperience />
