@@ -162,34 +162,60 @@ import { AnimatePresence, motion } from 'motion/react';
 
 //   },
 // ];
+
+
 const content = [
   {
-    title: "Full-Stack eCommerce Platform",
-    url: "https://shopping-cart-pi-ruby.vercel.app/",
-    image: "/Screenshot 2025-12-10 at 7.43.40 PM.png",
+    title: "Social Real Estate Marketplace",
+    url: "https://propertyx-realestate.vercel.app",
+    image: "/Screenshot 2026-01-27 at 12.29.49 AM.png",
     description:
-      "A production-ready full-stack eCommerce application featuring a modern React frontend and a secure, scalable backend. Designed to handle real-world shopping flows, payments, and user management.",
+      "A scalable social marketplace for real estate that combines property discovery, real-time communication, and AI-assisted search. Built to support multi-role users, live interactions, and intelligent property insights.",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Full-Stack eCommerce App
+      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--purple-500),var(--violet-700))] text-white">
+        Social Real Estate Platform
       </div>
     ),
     features: [
-      "Modern frontend built with React, Tailwind CSS, and Redux for global state management.",
-      "Secure backend using Express and MongoDB with authentication and role-based authorization.",
-      "Integrated Razorpay for secure online payments and order processing.",
-      "Cloudinary integration for optimized product image and media uploads.",
-      "Complete shopping flow including cart management, checkout, and order tracking."
+      "Real-time personal communication using WebSockets for instant messaging between buyers, sellers, and agents.",
+      "Role-based access control (RBAC) supporting admins, agents, and users with protected routes and permissions.",
+      "AI-powered property assistant using RAG with vector database for intelligent property recommendations and queries.",
+      "Live map-based property exploration with admin-managed listings and dynamic updates.",
+      "Scalable architecture designed to handle growing users, listings, and real-time events."
     ],
     library: [
       { name: "React", icon: "/reactjs-svgrepo-com.svg" },
       { name: "Redux", icon: "/redux-svgrepo-com.svg" },
+      { name: "TanStack Query", icon: "/splash-light.png" },
       { name: "Node.js", icon: "/node-js-svgrepo-com.svg" },
       { name: "Express.js", icon: "/express-svgrepo-com.svg" },
-      { name: "MongoDB", icon: "/mongodb-svgrepo-com.svg" },
-      { name: "Tailwind CSS", icon: "/tailwind-svgrepo-com.svg" },
-      { name: "Razorpay", icon: "/razorpay-icon.svg" },
-      { name: "Cloudinary", icon: "/cloudinary-icon.svg" }
+      { name: "WebSocket", icon: "/node-js-svgrepo-com.svg" },
+      { name: "Vector DB", icon: "/MongoDB.png" }
+    ]
+  }
+
+  ,
+  {
+    title: "eCommerce Frontend UI",
+    url: "https://shopping-cart-pi-ruby.vercel.app/",
+    image: "/Screenshot 2025-12-10 at 7.43.40 PM.png",
+    description:
+      "A modern and responsive eCommerce frontend interface built with React and Tailwind CSS. Focused on clean UI, intuitive user experience, and real-world shopping flows without backend integration.",
+    content: (
+      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
+        eCommerce Frontend UI
+      </div>
+    ),
+    features: [
+      "Responsive eCommerce UI built using React and Tailwind CSS.",
+      "Product listing pages with clean layouts and reusable components.",
+      "Shopping cart interface with add/remove item interactions.",
+      "Modern design system focused on usability and visual clarity.",
+      "Optimized UI for desktop, tablet, and mobile screens."
+    ],
+    library: [
+      { name: "React", icon: "/reactjs-svgrepo-com.svg" },
+      { name: "Tailwind CSS", icon: "/tailwind-svgrepo-com.svg" }
     ]
   },
 
@@ -278,14 +304,13 @@ const content = [
 ];
 
 
-
 const Myprojects = () => {
 
   const [open, setOpen] = useState(null)
   return (
     <div id='project' className='pt-5 bg-black'>
-      <motion.p initial={{ opacity: 1, y: 13 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className='text-2xl md:text-4xl text-neutral-400 text-center py-3'>code meets creativity</motion.p>
-      <motion.p initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className='text-5xl md:text-8xl pb-8 text-center text-white'>Crafted <span className=' bg-linear-to-r from-pink-500 to-violet-600 text-transparent bg-clip-text'>Projects</span></motion.p>
+      <motion.p initial={{ opacity: 1, y: 13 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className='text-2xl md:text-4xl text-neutral-400 text-center py-3'>Building meaningful web experiences.</motion.p>
+      <motion.p initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className='text-5xl md:text-8xl pb-8 text-center text-white'>Featured <span className=' bg-linear-to-r from-pink-500 to-violet-600 text-transparent bg-clip-text'>Projects</span></motion.p>
       <div className='px-4 md:px-6 lg:px-10 pt-10'>
         <div className="w-full py-4 ">
           <div className='hidden md:flex'>

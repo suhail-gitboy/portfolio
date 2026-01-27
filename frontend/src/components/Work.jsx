@@ -52,7 +52,7 @@ const WorkExperience = () => {
       <motion.h1 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: easeIn }} className='py-8  text-5xl md:text-8xl  text-transparent bg-linear-to-l from-white to-neutral-500 bg-clip-text'>Work Experience</motion.h1>
 
 
-      <div className="pt-10 px-5 md:px-10 pb-20">
+      <div className="pt-10 px-5 md:px-10 pb-5">
         <AnimatePresence>
           {experiences.map((exp, idx) => (
             <motion.div initial={{ opacity: 0, scaleY: 0.7 }} whileInView={{ scaleY: 1, opacity: 1 }} transition={{ duration: 0.6, ease: easeIn }}

@@ -4,6 +4,7 @@ import Nav from "../common/Nav";
 import { motion } from "motion/react";
 import { TimelineDemo } from "../common/Timeline";
 import { useEffect, useState } from "react";
+import Footer from "../common/Footer";
 
 export default function AboutSection() {
 
@@ -81,6 +82,7 @@ export default function AboutSection() {
       <div className="pt-20">
         <TimelineDemo />
       </div>
+      <Footer />
     </div>
   );
 }

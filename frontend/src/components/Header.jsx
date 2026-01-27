@@ -52,7 +52,7 @@ const Header = () => {
             </GradientText></p> <MdArrowForwardIos className='text-white/50 ml-2 text-md' />
           </motion.a>
 
-          <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className='text-2xl sm:text-3xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className='text-2xl md:text-6xl bg-clip-text md:text-transparent md:bg-linear-to-b  text-violet-600 from-neutral-200  md:to-neutral-700'> User Experience   </i></motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className='text-2xl sm:text-3xl w-3/5 text-center md:w-auto md:text-start md:text-6xl text-white/80 mb-3'>I make fullstack Apps   with AI <br className='hidden md:block' />to build smarter <i className='text-2xl md:text-6xl bg-clip-text text-transparent bg-linear-to-b   from-neutral-200  to-neutral-700'> User Experience   </i></motion.h1>
 
           <div className='flex flex-col w-fit mt-25 md:mt-20 p-4 rounded-md '>
             {/* <p className="mx-auto max-w-lg py-5 text-left">
@@ -106,15 +106,15 @@ const Header = () => {
       </div>
 
 
-      <div style={{ position: 'absolute' }} className=" h-full bg-linear-to-b border border-b rounded rounded-b-4xl from-black via-gray-900 md:via-none to-purple-950  top-0 left-0 right-0">
+      <div style={{ position: 'absolute' }} className=" h-full bg-linear-to-b border border-b rounded rounded-b-4xl from-black via-purple-900/20 to-purple-950/90 md:via-none   top-0 left-0 right-0">
         {
           !isMobile && <Galaxy
             mouseRepulsion={true}
             mouseInteraction={true}
-            density={0.2}
-            glowIntensity={0.2}
-            saturation={0.2}
-            hueShift={240}
+            density={0.3}
+            glowIntensity={0.1}
+            saturation={0.0}
+            hueShift={620}
           />
         }
       </div>
