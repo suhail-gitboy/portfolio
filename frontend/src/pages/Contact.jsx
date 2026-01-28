@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { MessageUpload } from "../Services/AllAiservices";
 import { useEffect, useState } from "react";
@@ -76,14 +76,14 @@ export default function ContactPage() {
 
             <div className="grid grid-cols-2 gap-4 max-w-md">
               {[
-                { label: "GitHub", value: "github.com/username", icon: <FaGithub /> },
-                { label: "LinkedIn", value: "linkedin.com/in/username", icon: <FaLinkedin /> },
-                { label: "Email", value: "hello@email.com", icon: <MdEmail /> },
-                { label: "Twitter", value: "@username", icon: <FaTwitter /> },
+                { label: "GitHub", value: "https://github.com/", icon: <FaGithub /> },
+                { label: "LinkedIn", value: "https://www.linkedin.com/in/ameer-suhail-78aa40303/", icon: <FaLinkedin /> },
+                { label: "Email", value: "mailto:suhailgti12@gmail.com", icon: <MdEmail /> },
+                { label: "Instagram", value: "https://www.instagram.com/suhaiiiiiiiiiiil", icon: <FaInstagram /> },
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center  gap-3 border border-neutral-800 rounded-xl p-4 
+                  className="flex overflow-hidden items-center  gap-3 border border-neutral-800 rounded-xl p-4 
                              hover:border-violet-700 transition"
                 >
                   <span className="text-violet-700 text-lg">

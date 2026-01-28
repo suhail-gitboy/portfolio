@@ -90,7 +90,7 @@ export default function BeamManualDemo() {
             />
 
             <Circle
-                imgSrc="../../public/chat-gpt (1).png"
+                imgSrc="/chat-gpt (1).png"
                 label="chat gpt"
                 circleRef={tailwindRef}
                 style={{ top: "50%", right: "5%" }}

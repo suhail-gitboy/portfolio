@@ -1,36 +1,56 @@
-import { createBrowserRouter } from "react-router"
-import { RouterProvider } from "react-router-dom"
-import Home from "./pages/Home"
-import { lazy } from "react"
-import ContactPage from "./pages/Contact"
-const Projects = lazy(() => import("./pages/Projects"))
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import Home from "./pages/Home";
+import TerminalLoader from "./ui/Loaderui";
 
-const Experience = lazy(() => import("./pages/Experience"))
-const Contact = lazy(() => import("./pages/Contact"))
-const AboutSection = lazy(() => import("./pages/About"))
-
-
-
+// Lazy pages
+const Projects = lazy(() => import("./pages/Projects"));
+const Experience = lazy(() => import("./pages/Experience"));
+const AboutSection = lazy(() => import("./pages/About"));
+const ContactPage = lazy(() => import("./pages/Contact"));
 
 function App() {
-
-
   const router = createBrowserRouter([
+    {
+      path: "/", element: <Suspense fallback={<TerminalLoader />}>
+        <Home />
+      </Suspense>
+    },
+    {
+      path: "/projects",
+      element: (
+        <Suspense fallback={<TerminalLoader />}>
+          <Projects />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/about",
+      element: (
+        <Suspense fallback={<TerminalLoader />}>
+          <AboutSection />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/experience",
+      element: (
+        <Suspense fallback={<TerminalLoader />}>
+          <Experience />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/contact",
+      element: (
+        <Suspense fallback={<TerminalLoader />}>
+          <ContactPage />
+        </Suspense>
+      ),
+    },
+  ]);
 
-    { path: "/", element: <Home /> },
-    { path: "/projects", element: <Projects /> },
-    { path: "/about", element: <AboutSection /> },
-    { path: "/experience", element: <Experience /> },
-    { path: "/contact", element: <ContactPage /> },
-
-  ])
-
-  return (
-    <>
-
-      <RouterProvider router={router} />
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
