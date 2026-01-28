@@ -4,12 +4,6 @@
   --purple-glow: #a855f7;
 }
 
-body {
-  margin: 0;
-  height: 100vh;
-  background: radial-gradient(circle at center, #12001d, #050008);
-  overflow: hidden;
-}
 
 /* Loader */
 .loader {
