@@ -1,12 +1,19 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { MessageUpload } from "../Services/AllAiservices";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../common/Footer";
 import Nav from "../common/Nav";
 import { Toaster, toast } from "sonner";
+import { useLocation } from "react-router";
 
 export default function ContactPage() {
+
+
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
   const [messagedetail, setMessagedetail] = useState({
     name: "",
     email: "",

@@ -2,10 +2,10 @@ import { Github, Linkedin, Mail, Instagram, InstagramIcon } from "lucide-react";
 import { Link, useLocation } from "react-router";
 import Nav from "../common/Nav";
 import { motion } from "motion/react";
-import { TimelineDemo } from "../common/Timeline";
-import { useEffect, useState } from "react";
-import Footer from "../common/Footer";
 
+import { lazy, useEffect, useState } from "react";
+import Footer from "../common/Footer";
+const Timeline = lazy(() => import("../common/Timeline"))
 export default function AboutSection() {
 
   const { pathname } = useLocation()
@@ -80,7 +80,7 @@ export default function AboutSection() {
         </div>
       </section>
       <div className="pt-20">
-        <TimelineDemo />
+        <Timeline />
       </div>
       <Footer />
     </div>

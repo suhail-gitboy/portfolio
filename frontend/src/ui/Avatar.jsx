@@ -64,8 +64,40 @@ export function AnimatedBeam({
                 rectB.top - containerRect.top + rectB.height / 2 + endYOffset
 
             const controlY = startY - curvature
+            const dx = endX - startX
+            const dy = endY - startY
 
-            const d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`
+            // Decide curve direction based on layout
+            const isMostlyHorizontal = Math.abs(dx) > Math.abs(dy)
+
+            const curvatureOffset = curvature || 80
+
+            let controlX1, controlY1, controlX2, controlY2
+
+            if (isMostlyHorizontal) {
+                // Horizontal flow (LEFT ↔ RIGHT)
+                controlX1 = startX + dx * 0.5
+                controlY1 = startY
+
+                controlX2 = startX + dx * 0.5
+                controlY2 = endY
+            } else {
+                // Vertical flow (TOP ↕ BOTTOM)
+                controlX1 = startX
+                controlY1 = startY + dy * 0.5
+
+                controlX2 = endX
+                controlY2 = startY + dy * 0.5
+            }
+
+            const d = `
+  M ${startX},${startY}
+  C ${controlX1},${controlY1}
+    ${controlX2},${controlY2}
+    ${endX},${endY}
+`
+
+
             setPathD(d)
         }
 

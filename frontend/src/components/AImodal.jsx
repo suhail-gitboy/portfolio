@@ -122,7 +122,7 @@ const AImodal = ({ Setaimodal, aimodal }) => {
 
                                 ) : (<>
                                     <EncryptedText
-                                        text="Ask anything. I’ll do my best to help"
+                                        text="Ask anything about him. will help unless server down"
                                         encryptedClassName="text-neutral-500"
                                         revealedClassName="text-white"
                                         revealDelayMs={70}

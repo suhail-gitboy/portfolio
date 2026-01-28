@@ -48,7 +48,7 @@ const Header = () => {
               showBorder={false}
               className="border-none"
             >
-              visit projects!
+              view projects!
             </GradientText></p> <MdArrowForwardIos className='text-white/50 ml-2 text-md' />
           </motion.a>
 
@@ -86,10 +86,10 @@ const Header = () => {
                 <a href="https://github.com/" className="hover:text-purple-500 text-white transition" >
                   <Github />
                 </a>
-                <a className="hover:text-purple-500 transition text-white" href="#">
+                <a href="mailto:suhailgti12@gmail.com" className="hover:text-purple-500 transition text-white">
                   <Mail />
                 </a>
-                <a className="hover:text-purple-500 text-white transition" href="#">
+                <a href="https://www.instagram.com/suhaiiiiiiiiiiil" className="hover:text-purple-500 text-white transition" >
                   <InstagramIcon />
                 </a>
               </div>
@@ -97,8 +97,8 @@ const Header = () => {
 
 
             <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className=' flex mx-auto space-x-3'>
-              <button className='flex items-center text-md md:text-xl text-gray-300 font-sans  border rounded-full px-4 py-2 border-gray-700'>Lets Connect <MdArrowForwardIos className='ml-1' /></button>
-              <button onClick={() => Navigate("/contact")} className='text-gray-400 text-md md:text-lg hover:text-white group transition-colors duration-300 flex items-center'><MdAlternateEmail className='mr-2 text-white group-hover:rotate-180 transition-transform text-lg md:text-3xl duration-300 group-hover:text-violet-600 ' />suhailgti12@gmail.com</button>
+              <button onClick={() => Navigate("/contact")} className='flex items-center text-md md:text-xl text-gray-300 font-sans  border rounded-full px-4 py-2 border-gray-700'>Lets Connect <MdArrowForwardIos className='ml-1' /></button>
+              <a href="mailto:suhailgti12@gmail.com" className='text-gray-400 text-md md:text-lg hover:text-white group transition-colors duration-300 flex items-center'><MdAlternateEmail className='mr-2 text-white group-hover:rotate-180 transition-transform text-lg md:text-3xl duration-300 group-hover:text-violet-600 ' />suhailgti12@gmail.com</a>
             </motion.div>
 
           </div>

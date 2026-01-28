@@ -16,7 +16,7 @@ import BeamManualDemo from '../components/Techavatars'
 import { TextAnimate } from '../ui/UI'
 
 import Footer from '../common/Footer'
-import TimelineDemo from '../common/Timeline'
+
 const Home = () => {
 
   const [Almodal, Setaimodal] = useState(false
@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div className='bg-black'>
       <Header />
-      <div className="pt-45">
+      <div className="pt-45 bg-black">
 
         <div className="flex justify-center items-center">
 
@@ -57,7 +57,7 @@ const Home = () => {
       <Myprojects />
       <Mystack />
       <div className="pt-20 bg-black">
-        <TimelineDemo />
+        <Timeline />
       </div>
       <WorkExperience />
 
