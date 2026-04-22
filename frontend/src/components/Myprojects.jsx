@@ -167,7 +167,7 @@ import { AnimatePresence, motion } from 'motion/react';
 const content = [
   {
     title: "Social Real Estate Marketplace",
-    url: "https://propertyx-realestate.vercel.app",
+    url: "https://property-x-realestate.vercel.app",
     image: "/Screenshot 2026-01-27 at 12.29.49 AM.png",
     description:
       "A scalable social marketplace for real estate that combines property discovery, real-time communication, and AI-assisted search. Built to support multi-role users, live interactions, and intelligent property insights.",
