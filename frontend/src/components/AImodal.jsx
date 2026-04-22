@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { PiTelegramLogoLight } from "react-icons/pi";
 import { AinputPost } from '../Services/AllAiservices';
 import { IoClose } from "react-icons/io5";
-import { EncryptedText } from '../ui/Encrypted';
+
 
 import { LoaderOne } from '../ui/Loader';
 const AImodal = ({ Setaimodal, aimodal }) => {
@@ -121,15 +121,37 @@ const AImodal = ({ Setaimodal, aimodal }) => {
 
 
                                 ) : (<>
-                                    <EncryptedText
-                                        text="Ask anything about him. will help unless server down"
+                                    <p className='font-light text-gray-300'>Ask anything about him. will help unless server down</p>
+                                    {/* <EncryptedText
+                                        text=""
                                         encryptedClassName="text-neutral-500"
                                         revealedClassName="text-white"
                                         revealDelayMs={70}
-                                    />
-                                    <div className='mt-4  w-fit  flex flex-col space-y-2 justify-center'>
-                                        <p onClick={() => Aidatasubmit("who is ameer suhail?")} className='rounded-xl bg-linear-to-br from-blue-800 to-purple-600  text-white text-xs font-sans py-2 px-4'>who is ameer suhail?</p>
-                                        <p onClick={() => Aidatasubmit("what skills he know?")} className='rounded-xl bg-linear-to-br from-violet-800 to-purple-600 text-white text-xs font-sans py-2 px-4'>what skills he know?</p>
+                                    /> */}
+                                    <div className="mt-6 flex flex-wrap gap-3">
+                                        {[
+                                            "Who is Ameer Suhail?",
+                                            "What skills does he have?"
+                                        ].map((text, index) => (
+                                            <button
+                                                key={index}
+                                                onClick={() => Aidatasubmit(text)}
+                                                className="
+        px-4 py-2 
+        rounded-2xl 
+        text-sm font-medium 
+        text-white 
+        bg-gradient-to-br from-blue-700 to-purple-600 
+        hover:from-blue-600 hover:to-purple-500 
+        transition-all duration-300 
+        shadow-md hover:shadow-lg 
+        hover:scale-105 
+        active:scale-95
+      "
+                                            >
+                                                {text}
+                                            </button>
+                                        ))}
                                     </div>
 
                                 </>)
